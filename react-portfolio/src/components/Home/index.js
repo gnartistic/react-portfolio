@@ -8,7 +8,8 @@ import Logo from './Logo';
 const Home = () =>
 {
     const [ letterClass, setLetterClass ] = useState( 'text-animate' );
-    const nameArrary = [ 'h', 'a', 'r', 'l', 'i', 'e' ];
+    const greetingArray = [ 'H', 'i',',', ' ', 'I', "'", 'm' ];
+    const nameArrary = [ 'h', 'a', 'r', 'l', 'i', 'e', '!'];
     const jobArrary = [ 'w', 'e', 'b', ' ', 'd', 'e', 'v', 'e', 'l', 'o', 'p', 'e', 'r', '.' ];
 
     useEffect( () =>
@@ -23,13 +24,7 @@ const Home = () =>
         <div className="container home-page">
             <div className="text-zone">
                 <h1>
-                    <span className={letterClass}>H</span>
-                    <span className={`${letterClass}_12`}>i</span>
-                    <span className={letterClass}>,</span>
-                    <br/>
-                    <span className={letterClass}> I</span>
-                    <span className={letterClass}>'</span>
-                    <span className={ letterClass }>m</span>
+                    <AnimatedLetters letterClass={letterClass} strArray={greetingArray} idx={15} />
                     <img src={C2} alt="developer" />
                     <AnimatedLetters letterClass={letterClass} strArray={nameArrary} idx={15}/>
                     <br />

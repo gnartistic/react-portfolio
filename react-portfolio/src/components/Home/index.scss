@@ -42,13 +42,14 @@
         }
 
         img {
-            margin-left: 20px;
+            margin-left: 6px;
             opacity: 0;
             width: 32px;
             height: auto;
             animation: rotateIn 1s linear both;
             animation-delay: 1.4s;
             margin-bottom: -1.2px;
+            padding: 0;
         }
     }
 
@@ -180,7 +181,7 @@
         left: 0;
     }
 
-    .logo-container svg {
+    .logo-container img {
         position: absolute;
         top: auto;
         right: auto;
