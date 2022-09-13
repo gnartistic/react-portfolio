@@ -3,7 +3,7 @@ import Loader from 'react-loaders'
 import { useRef } from 'react'
 import emailjs from '@emailjs/browser'
 import AnimatedLetters from '../AnimatedLetters'
-import './index.scss'
+import './index.scss';
 
 const Contact = () =>
 {
@@ -28,7 +28,7 @@ const Contact = () =>
             .then(
                 () =>
                 {
-                    alert( 'Message successfully sent!' )
+
                     window.location.reload( false )
                 },
                 () =>
