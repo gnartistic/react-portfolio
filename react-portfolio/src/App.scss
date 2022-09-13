@@ -2,6 +2,8 @@ $primary-color: #25e4d2;
 
 @import 'animate.css';
 
+@import '~loaders.css/src/animations/line-scale-pulse-out-rapid.scss';
+
 @font-face {
     font-family: 'Helvetica Neue';
     src: url('./assets/fonts/helvetica-neu.ttf') format('ttf');
@@ -17,6 +19,25 @@ $primary-color: #25e4d2;
     src: url('./assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
 
-input, textarea {
+input,
+textarea {
     font-family: 'Helvetica Neue';
+}
+
+.loader-hidden {
+    display: none;
+}
+
+.loader-active {
+    display: block;
+    position: absolute;
+    left: 5%;
+    right: 0;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    width: 50px;
+    height: 50px;
+    animation: fadeOut 1s 1s;
+    animation-fill-mode: forwards;
 }
