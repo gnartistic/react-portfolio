@@ -85,7 +85,7 @@
 }
 
 @media screen and (max-width: 900px) {
-     .home-page h1 {
+    .home-page h1 {
         margin-left: 10%;
     }
     .home-page h2 {
@@ -137,16 +137,18 @@
 @media screen and (max-width: 600px) {
 
     .home-page h1 {
-        font-size: 26px;
-        line-height: 25px;
-        margin-left: 20%;
+        font-size: 5vh;
+        flex-wrap: wrap;
+        line-height: 6vh;
+        margin-left: 15%;
         img {
-            width: 14px;
+            width: 3vh;
             height: auto;
         }
     }
     .home-page h2 {
-        margin-left: 20%;
+        left: 50%;
+        padding: 5%;
         flex-wrap: wrap;
     }
     .tags,
@@ -157,16 +159,15 @@
     
     .home-page .text-zone {
         position: initial;
-        width: 80%;
+        width: 100%;
         transform: none;
-        padding: 10px;
         box-sizing: border-box;
     }
 
     .home-page .flat-button {
         float: none;
         display: block;
-        margin: 20px auto 0 auto;
+        margin: 20px auto 0 25%;
         width: 124px;
     }
 
