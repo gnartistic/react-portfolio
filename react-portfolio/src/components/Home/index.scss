@@ -137,38 +137,45 @@
 @media screen and (max-width: 600px) {
 
     .home-page h1 {
+        margin-left: 25%;
         font-size: 5vh;
-        flex-wrap: wrap;
-        line-height: 6vh;
-        margin-left: 15%;
+
         img {
-            width: 3vh;
-            height: auto;
+            height: 4vh;
+            width: auto;
         }
     }
     .home-page h2 {
-        left: 50%;
-        padding: 5%;
-        flex-wrap: wrap;
+        margin-left: 15%;
+        font-size: 1.5vh;
     }
     .tags,
     .home-page h1:before,
     .home-page h1:after {
         display: none;
     }
-    
+
     .home-page .text-zone {
         position: initial;
         width: 100%;
         transform: none;
+        padding: 10px;
         box-sizing: border-box;
     }
 
     .home-page .flat-button {
         float: none;
         display: block;
-        margin: 20px auto 0 25%;
+        margin: 10% 23% 0 auto;
         width: 124px;
+    }
+
+    .home-page {
+        right: 15%;
+
+    .text-zone {
+        position: absolute;
+        top: 60%;
     }
 
     .logo-container {
@@ -187,7 +194,8 @@
         top: auto;
         right: auto;
         bottom: auto;
-        left: 0;
+        left: -30%;
         margin: auto;
     }
+}
 }
