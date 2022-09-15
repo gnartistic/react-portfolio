@@ -25,9 +25,7 @@ const Works = () =>
                 <h1>
                     <AnimatedLetters letterClass={letterClass}  strArray={[ 'W', 'o', 'r', 'k', 's',]} idx={15} />
                 </h1>
-                <p>
-                    
-                </p>
+                
             </div>
         </div>
         <Loader type='line-scale-pulse-out-rapid'/>

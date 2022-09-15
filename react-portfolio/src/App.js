@@ -4,7 +4,7 @@ import Layout from './components/Layout';
 import Home from './components/Home';
 import About from './components/About';
 import Contact from './components/Contact';
-import Resume from './components/Resume';
+import Skills from './components/Skills';
 import Works from './components/Works';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
           <Route index element={<Home />} />
           <Route path='about' element={<About />} />
           <Route path='contact' element={<Contact />} />
-          <Route path='resume' element={<Resume />} />
+          <Route path='skills' element={<Skills />} />
           <Route path='works' element={<Works />} />
           </Route>
         </Routes>

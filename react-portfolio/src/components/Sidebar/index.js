@@ -3,7 +3,7 @@ import './index.scss';
 import Logo from '../../assets/images/sideBarLogo.png';
 import LogoSubtitle from '../../assets/images/name.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser, faCode, faPaperPlane, faPhone, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faUser, faFileLines, faScrewdriverWrench, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub, } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () =>
@@ -24,32 +24,27 @@ const Sidebar = () =>
             <NavLink exact='true' activeclassname='active' className="contact-link" to='/contact'>
                 <FontAwesomeIcon icon={faEnvelope} size="lg" color="#fefefe" />
             </NavLink>
-            <NavLink exact='true' activeclassname='active' className='resume-link' to='/resume'>
-                <FontAwesomeIcon icon={faFileLines} size="lg" color="#fefefe" />
+            <NavLink exact='true' activeclassname='active' className='skills-link' to='/skills'>
+                <FontAwesomeIcon icon={faScrewdriverWrench} size="lg" color="#fefefe" />
             </NavLink>
             <NavLink exact='true' activeclassname='active' className='works-link' to='/works'>
-                <FontAwesomeIcon icon={faCode} size="lg" color="#fefefe" />
+                <FontAwesomeIcon icon={faLaptopCode} size="lg" color="#fefefe" />
             </NavLink>
         </nav>
         <ul>
             <li>
-                <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/charlie-houston-43220a236'>
+                <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/charlie-houston-43220a236' exact='true' activeclassname='active' className='linkedIn'>
                     <FontAwesomeIcon icon={faLinkedin} color="#fefefe"/>
                 </a>
             </li>
             <li>
-                <a target="_blank" rel='noreferrer' href='https://github.com/gnartistic'>
+                <a target="_blank" rel='noreferrer' href='https://github.com/gnartistic' exact='true' activeclassname='active' className='gitHub'>
                     <FontAwesomeIcon icon={faGithub} color="#fefefe" />
                 </a>
             </li>
             <li>
-                <a target="_blank" rel='noreferrer' href='mailto:gn4rtistic@gmail.com'>
-                    <FontAwesomeIcon icon={faPaperPlane} color="#fefefe" />
-                </a>
-            </li>
-            <li>
-                <a target="_blank" rel='noreferrer' href='tel:2104457296'>
-                    <FontAwesomeIcon icon={faPhone} color="#fefefe" />
+                <a target="_blank" rel='noreferrer' href='react-portfolio/Resume.pdf' exact='true' activeclassname='active' className='resume'>
+                    <FontAwesomeIcon icon={faFileLines} color="#fefefe" />
                 </a>
             </li>
         </ul>

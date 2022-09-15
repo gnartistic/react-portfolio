@@ -29,7 +29,7 @@
         position: absolute;
         height: 210px;
         top: 50%;
-        margin-top: -150px;
+        margin-top: -180px;
         width: 100%;
 
         a {
@@ -90,15 +90,15 @@
             }
         }
 
-        a.works-link {
+        a.skills-link {
             &::after {
-                content: 'WORKS';
+                content: 'SKILLS';
             }
         }
 
-        a.resume-link {
+        a.works-link {
             &::after {
-                content: 'RESUME';
+                content: 'WORKS';
             }
         }
 
@@ -111,7 +111,7 @@
 
     ul {
         position: absolute;
-        bottom: 20px;
+        bottom: 40px;
         width: 100%;
         display: block;
         padding: 0;
@@ -121,18 +121,71 @@
 
         li {
             a {
-                padding: 7px 0;
-                display: block;
-                font-size: 15px;
-                line-height: 16px;
+                font-size: 20px;
+            color: #353A41;
+            display: block;
+            line-height: 35px;
+            height: 35px;
+            position: relative;
+            text-decoration: none;
 
-                &:hover svg {
-                    color: #25E4D2;
+            i {
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover {
+                color: #fefefe;
+
+                svg {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                font-size: 9px;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                &::after {
+                    content: 'LinkedIn';
                 }
             }
         }
+
+        a.gitHub {
+            &::after {
+                content: 'github';
+            }
+        }
+
+        a.resume {
+            &::after {
+                content: 'Resume';
+            }
+        }
+
+        a.active {
+            svg {
+                color: #25E4D2;
+            }
+        }
+            }
+        }
     }
-}
 
 @media screen and (max-width: 600px) {
 
@@ -185,7 +238,7 @@
                 position: relative;
                 text-decoration: none;
 
-                i {
+                i { 
                     transition: all 0.3s ease-out;
                 }
 
@@ -224,6 +277,7 @@
 
             a.about-link {
                 &::after {
+                    
                     content: 'ABOUT';
                 }
             }

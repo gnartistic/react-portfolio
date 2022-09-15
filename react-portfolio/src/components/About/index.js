@@ -33,29 +33,6 @@ const About = () =>
                 <p>If I had to define myself in one sentence, it'd be:
                     <br/> I am a natural engineer with a creative background, obsessed with exploring this planet, and a strong love for my family and dogs. </p>
             </div>
-
-            <div className='stage-cube-cont'>
-                <div className='cubespinner'>
-                    <div className='face1'>
-                        <FontAwesomeIcon icon={faJsSquare} color="#EFD81D"/>
-                    </div>
-                    <div className='face2'>
-                        <FontAwesomeIcon icon={faHtml5} color="#F06529" />
-                    </div>
-                    <div className='face3'>
-                        <FontAwesomeIcon icon={faCss3} color="#28A4D9" />
-                    </div>
-                    <div className='face4'>
-                        <FontAwesomeIcon icon={faBootstrap} color="#7610f7" />
-                    </div>
-                    <div className='face5'>
-                        <FontAwesomeIcon icon={faReact} color="#5ED4F4" />
-                    </div>
-                    <div className='face6'>
-                        <FontAwesomeIcon icon={faGitAlt} color="#e44c2f" />
-                    </div>
-                </div>
-                </div>
         </div>
             <Loader type="line-scale-pulse-out-rapid" />
         </>
