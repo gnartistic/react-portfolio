@@ -9,17 +9,18 @@
 }
 
 .display-container {
-        width: 725px;
-        height: 850px;
+        width: 625px;
+        height: 1200px;
         position: absolute;
-        left: 110%;
-        top: -80%;
+        left: 50%;
+        top: -10%;
         justify-content: space-between;
         align-items: center;
         overflow-y: scroll;
         display: block;
         flex: 1;
         animation: fadeInRight 2s;
+        padding-right: 20%;
 
     .description {
         padding-right: 50px;
@@ -45,7 +46,7 @@
 
         img.Mac {
             width: auto;
-            height: 425px;
+            height: 350px;
         }
 
         img.Phone {
@@ -63,7 +64,7 @@
 
         img.Mac {
             width: auto;
-            height: 425px;
+            height: 350px;
         }
 
         img.Phone {
@@ -77,10 +78,11 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        margin-bottom: 600px;
 
         img.Mac {
             width: auto;
-            height: 425px;
+            height: 350px;
         }
 
         img.Phone {
@@ -89,4 +91,107 @@
             height: 325px;
         }
     }
+}
+
+@media screen and (max-width: 600px) {
+    .works-page {
+    .text-zone {
+        top: 25%;
+
+        .special-p {
+        animation: fadeInLeft 2s;
+        }
+    }
+}
+
+
+.display-container {
+        width: 300px;
+        height: 480px;
+        position: absolute;
+        left: 2%;
+        top: 38%;
+        justify-content: space-between;
+        align-items: center;
+        overflow-y: scroll;
+        display: block;
+        flex: 1;
+        animation: fadeInRight 2s;
+        padding-right: 20%;
+
+    .description {
+        padding-right: 50px;
+    }
+
+    h2 {
+        width: auto;
+        height: auto;
+        padding-top: 50px;
+        
+        a {
+            font-size: larger;
+            color: #ffd700;
+        }
+    }
+
+
+    .coinWiki {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        img.Mac {
+            width: auto;
+            padding-left: 25%;
+            height: 350px;
+        }
+
+        img.Phone {
+            padding-left: 25%;
+            width: auto;
+            height: 325px;
+        }
+    }
+
+    .hobbyXchange {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+
+        img.Mac {
+            padding-left: 25%;
+            width: auto;
+            height: 350px;
+        }
+
+        img.Phone {
+            padding-left: 25%;
+            width: auto;
+            height: 325px;
+        }
+    }
+
+    .photoPort {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        img.Mac {
+            padding-left: 25%;
+            width: auto;
+            height: 350px;
+        }
+
+        img.Phone {
+            padding-left: 25%;
+            width: auto;
+            height: 325px;
+        }
+    }
+}
 }

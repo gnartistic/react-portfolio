@@ -19,11 +19,47 @@ const Skills = () =>
 
     return (
         <>
-            <div className='container works-page'>
+            <div className='container skills-page'>
                 <div className='text-zone'>
                     <h1>
                         <AnimatedLetters letterClass={letterClass} strArray={[ 'S', 'k', 'i', 'l', 'l', 's', ]} idx={15} />
                     </h1>
+                    <div className='list-container'>
+                    <div className='list1'>
+                    <h2>Languages</h2>
+                    <ul>
+                        <li>JavaScript,</li>
+                        <li>MySQL,</li>
+                        <li>MongoDB,</li>
+                        <li>React,</li>
+                        <li>HTML,</li>
+                        <li>CSS.</li>
+                    </ul>
+                    </div>
+                <div className='list2'>
+                    <h2>Technologies</h2>
+                    <ul>
+                        <li>AJAX,</li>
+                        <li>jQuery,</li>
+                        <li>Node.js,</li>
+                        <li>Mongoose,</li>
+                        <li>GraphQL,</li>
+                        <li>GIT,</li>
+                        <li>Express.js,</li>
+                        <li>Bootstrap,</li>
+                        <li>Bulma.</li>
+                    </ul>
+                </div>
+                <div className='list3'>
+                    <h2>Applications</h2>
+                    <ul>
+                        <li>VSCode,</li>
+                        <li>Insomnia,</li>
+                        <li>Adobe Photoshop Express,</li>
+                        <li>Apollo GraphQL.</li>
+                    </ul>
+                        </div>
+                        </div>
                 </div>
                 <div className='stage-cube-cont'>
                         <div className='cubespinner'>

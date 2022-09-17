@@ -35,7 +35,8 @@ const Works = () =>
                     <p className='special-p'>
                         As a Developer, I aim to engage my audience for an impactful user experience. All the apps I've built are  designed to be responsive in order to provide a uniform experience on the web across all devices.
                     </p>
-                    <div className='display-container'>
+                </div>
+                <div className='display-container'>
                         <h2><a href='https://gnartistic.github.io/coinWiki2.0/'>coinWiki</a></h2>
                         <h3 className='description'>
                         CoinWiki is an app I'm working to develop with my past classmates that is a educational resource for cyptocurrency. 
@@ -48,7 +49,7 @@ const Works = () =>
                         <h3 className='description'>
                         HobbyXchange is the place where failed hobbies go to die and be reborn. This app was built for those who frequently cycle through trying new hobbies and wish to sell or trade supplies with other users.
                         </h3>
-                          <div className='hobbyXchange'>
+                        <div className='hobbyXchange'>
                             <img src={hobbyxchangeMac} alt='hobbyXchangeMac' className='Mac' />
                             <img src={hobbyxchangePhone} className='Phone' alt='hobbyXchangeMobile' />
                         </div>
@@ -56,12 +57,12 @@ const Works = () =>
                         <h3 className='description'>
                         This is a Photographer Portfolio template, I made this to showcase the kind of apps I can make for small business owners and freelane artists.
                         </h3>
-                          <div className='photoPort'>
+                        <div className='photoPort'>
                             <img src={photoportMac} alt='photoportMac' className='Mac' />
                             <img src={photoportPhone} className='Phone' alt='photoportMobile' />
-                        </div>
                     </div>
                 </div>
+                
             </div>
             <Loader type='line-scale-pulse-out-rapid' />
         </>
