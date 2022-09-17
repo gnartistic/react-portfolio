@@ -1,8 +1,14 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.90f2498e.css",
-    "main.js": "/react-portfolio/static/js/main.04d7b475.js",
+    "main.css": "/react-portfolio/static/css/main.942e8fef.css",
+    "main.js": "/react-portfolio/static/js/main.54044198.js",
     "static/js/787.a2cb61a6.chunk.js": "/react-portfolio/static/js/787.a2cb61a6.chunk.js",
+    "static/media/photoportMac.png": "/react-portfolio/static/media/photoportMac.c65e6062bf2f98963983.png",
+    "static/media/photoportMobile.png": "/react-portfolio/static/media/photoportMobile.db5dc550146df657a77f.png",
+    "static/media/coinWikiMac.png": "/react-portfolio/static/media/coinWikiMac.32be7258f6a734f6da97.png",
+    "static/media/hobbyxchangeMac.png": "/react-portfolio/static/media/hobbyxchangeMac.cd32392e1329e0706506.png",
+    "static/media/coinWikiphone.png": "/react-portfolio/static/media/coinWikiphone.b68e4a53e4dafaba937c.png",
+    "static/media/hobbyxchangeMobile.png": "/react-portfolio/static/media/hobbyxchangeMobile.52d2a3935b6d4ceccaa2.png",
     "static/media/avatar.png": "/react-portfolio/static/media/avatar.d3cbe84435073333e8ec.png",
     "static/media/name.png": "/react-portfolio/static/media/name.6b631bc9a3548c571306.png",
     "static/media/C2.png": "/react-portfolio/static/media/C2.ada0f463a0955a3dc088.png",
@@ -11,12 +17,12 @@
     "static/media/LaBelleAurore.woff2": "/react-portfolio/static/media/LaBelleAurore.a83c1c58fd7e43972e4a.woff2",
     "static/media/CoolveticaRg-Regular.woff2": "/react-portfolio/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/react-portfolio/index.html",
-    "main.90f2498e.css.map": "/react-portfolio/static/css/main.90f2498e.css.map",
-    "main.04d7b475.js.map": "/react-portfolio/static/js/main.04d7b475.js.map",
+    "main.942e8fef.css.map": "/react-portfolio/static/css/main.942e8fef.css.map",
+    "main.54044198.js.map": "/react-portfolio/static/js/main.54044198.js.map",
     "787.a2cb61a6.chunk.js.map": "/react-portfolio/static/js/787.a2cb61a6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.90f2498e.css",
-    "static/js/main.04d7b475.js"
+    "static/css/main.942e8fef.css",
+    "static/js/main.54044198.js"
   ]
 }
