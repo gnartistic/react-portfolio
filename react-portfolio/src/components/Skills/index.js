@@ -24,10 +24,6 @@ const Skills = () =>
                     <h1>
                         <AnimatedLetters letterClass={letterClass} strArray={[ 'S', 'k', 'i', 'l', 'l', 's', ]} idx={15} />
                     </h1>
-                    <h2>Summary</h2>
-                    <p>
-                        I am a Full-Stack Web Developer with a creative background. I recently earned a certificate in full stack development from the University of San Antonio Coding Bootcamp, with newly developed skills in JavaScript, CSS, React.js, Node.js, Express.js, and REST APIs. I'm known as an innovative problem solver passionate about developing applications. With each project, my aim is to best engage my audience for an impactful user experience. I’m excited to leverage my skills as part of a fast-paced, quality-driven team to build better experiences on the web.
-                    </p>
                 </div>
                 <div className='stage-cube-cont'>
                         <div className='cubespinner'>

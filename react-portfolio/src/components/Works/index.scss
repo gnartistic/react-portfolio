@@ -1,0 +1,92 @@
+.works-page {
+    .text-zone {
+        top: 30%;
+
+        .special-p {
+        animation: fadeInLeft 2s;
+        }
+    }
+}
+
+.display-container {
+        width: 725px;
+        height: 850px;
+        position: absolute;
+        left: 110%;
+        top: -80%;
+        justify-content: space-between;
+        align-items: center;
+        overflow-y: scroll;
+        display: block;
+        flex: 1;
+        animation: fadeInRight 2s;
+
+    .description {
+        padding-right: 50px;
+    }
+
+    h2 {
+        width: auto;
+        height: auto;
+        padding-top: 50px;
+        
+        a {
+            font-size: larger;
+            color: #ffd700;
+        }
+    }
+
+
+    .coinWiki {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        img.Mac {
+            width: auto;
+            height: 425px;
+        }
+
+        img.Phone {
+            padding-left: 20px;
+            width: auto;
+            height: 325px;
+        }
+    }
+
+    .hobbyXchange {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+
+        img.Mac {
+            width: auto;
+            height: 425px;
+        }
+
+        img.Phone {
+            padding-left: 20px;
+            width: auto;
+            height: 325px;
+        }
+    }
+
+    .photoPort {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        img.Mac {
+            width: auto;
+            height: 425px;
+        }
+
+        img.Phone {
+            padding-left: 20px;
+            width: auto;
+            height: 325px;
+        }
+    }
+}
