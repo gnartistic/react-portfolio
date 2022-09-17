@@ -32,7 +32,7 @@ const Works = () =>
                     <h1>
                         <AnimatedLetters letterClass={letterClass} strArray={[ 'W', 'o', 'r', 'k', 's', ]} idx={20} />
                     </h1>
-                    <p className='special-p'>
+                    <p>
                         As a Developer, I aim to engage my audience for an impactful user experience. All the apps I've built are  designed to be responsive in order to provide a uniform experience on the web across all devices.
                     </p>
                 </div>
