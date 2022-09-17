@@ -109,7 +109,7 @@
         width: 300px;
         height: 480px;
         position: absolute;
-        left: 2%;
+        left: 5%;
         top: 38%;
         justify-content: space-between;
         align-items: center;
@@ -117,7 +117,6 @@
         display: block;
         flex: 1;
         animation: fadeInRight 2s;
-        padding-right: 20%;
 
     .description {
         padding-right: 50px;
@@ -144,12 +143,12 @@
 
         img.Mac {
             width: auto;
-            padding-left: 25%;
+            padding-left: 20%;
             height: 350px;
         }
 
         img.Phone {
-            padding-left: 25%;
+            padding-left: 20%;
             width: auto;
             height: 325px;
         }
@@ -163,13 +162,13 @@
 
 
         img.Mac {
-            padding-left: 25%;
+            padding-left: 20%;
             width: auto;
             height: 350px;
         }
 
         img.Phone {
-            padding-left: 25%;
+            padding-left: 20%;
             width: auto;
             height: 325px;
         }
@@ -182,13 +181,13 @@
         flex-wrap: wrap;
 
         img.Mac {
-            padding-left: 25%;
+            padding-left: 20%;
             width: auto;
             height: 350px;
         }
 
         img.Phone {
-            padding-left: 25%;
+            padding-left: 20%;
             width: auto;
             height: 325px;
         }
