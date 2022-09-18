@@ -28,10 +28,12 @@ const About = () =>
                         strArray={[ 'A', 'b', 'o', 'u', 't', ' ', 'm', 'e' ]} idx={15}
                     />
                 </h1>
-                <p>I'm a very ambitious fullstack developer looking for a role in an established company with opportunities to work with the latest technologies on challenging and diverse projects.</p>
-                <p>I'm quietly confident, naturally curious, and perpetually working on developing my skills one error at a time.</p>
-                <p>If I had to define myself in one sentence, it'd be:
-                    <br/> I am a natural engineer with a creative background, obsessed with exploring this planet, and a strong love for my family and dogs. </p>
+                <p>I'm a very ambitious and creative fullstack developer looking for a role in an established company with opportunities to work with the latest technologies on challenging and diverse projects.</p>
+                    <p>I'm quietly confident, naturally curious, and perpetually working on developing my skills... one error at a time.</p>
+                    <br/>
+                <p><span className='smaller'>If I had to define myself in one sentence, it'd be:</span>
+                        <br />
+                    <br/> <span className='bold'>I am a natural engineer, who loves to explore, obsessed with experiencing the most this life has to offer with my family and 2 dogs.</span> </p>
             </div>
         </div>
             <Loader type="line-scale-pulse-out-rapid" />

@@ -109,8 +109,10 @@
     .home-page .flat-button {
         float: none;
         display: block;
-        margin: 20px auto 0 auto;
+        margin: 20px 0 0 0;
+        left: 18.5%;
         width: 124px;
+        position: absolute;
     }
 
     .logo-container {
@@ -146,7 +148,7 @@
         }
     }
     .home-page h2 {
-        margin-left: 13.5%;
+        margin-left: 14%;
         font-size: 1.5vh;
     }
     .tags,

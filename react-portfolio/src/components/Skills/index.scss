@@ -97,7 +97,7 @@
         h2 {
             font-size: 20px;
             animation: fadeIn 2s;
-            color: #fae049;
+            color: #f6dd51;
         }
 
     ul{
@@ -132,17 +132,69 @@
 
 @media screen and (max-width: 900px) {
     .stage-cube-cont {
-    width: 50%;
+    width: 80%;
     height: 100%;
     top: -10%;
     padding-top: 18%;
-    margin-left: 0;
+    margin-left: 80%;
     position: absolute;
     right: 0;
     overflow: hidden;
 }
 
+.cubespinner {
+    animation-name: spincube;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 12s;
+    transform-style: preserve-3d;
+    transform-origin: 50px 50px 0;
+    margin-left: calc(38%);
 
+    div {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border: 1px solid #ccc;
+        background: rgba(255, 255, 255, 0.4);
+        text-align: center;
+        font-size: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 0 20px 0px lightyellow;
+    }
+
+    .face1 {
+        transform: translateZ(50px);
+        color: #dd0031;
+    }
+
+    .face2 {
+        transform: rotateY(90deg) translateZ(50px);
+        color: #f06529;
+    }
+
+    .face3 {
+        transform: rotateY(90deg) rotateX(90deg) translateZ(50px);
+        color: #28a4d9;
+    }
+
+    .face4 {
+        transform: rotateY(180deg) rotateZ(90deg) translateZ(50px);
+        color: #5ed4f4;
+    }
+
+    .face5 {
+        transform: rotateY(-90deg) rotateZ(90deg) translateZ(50px);
+        color: #efd81d;
+    }
+
+    .face6 {
+        transform: rotateX(-90deg) translateZ(50px);
+        color: #ec4d28;
+    }
+}
 }
 
 @media screen and (max-width: 600px) {

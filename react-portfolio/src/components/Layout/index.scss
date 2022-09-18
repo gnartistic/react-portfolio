@@ -201,11 +201,11 @@
 @media screen and (max-width: 600px) {
 
     .about-page {
-        top: 3%;
+        top: 10%;
     }
 
     .contact-page {
-        top: 15%;
+        top: 10%;
     }
 
     .works-page,
@@ -214,10 +214,10 @@
     .contact-page {
         .text-zone {
             position: absolute;
-            left: 21%;
+            left: 10%;
             top: 45%;
             transform: translateY(-50%);
-            width: 60%;
+            width: 80%;
             vertical-align: middle;
             display: table-cell;
             max-height: 90%;
@@ -257,7 +257,7 @@
             }
 
             p {
-                font-size: 12px;
+                font-size: 16px;
                 color: white;
                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                 font-weight: 300;

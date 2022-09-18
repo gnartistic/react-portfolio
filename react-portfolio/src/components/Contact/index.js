@@ -59,7 +59,7 @@ const Contact = () =>
                         <AnimatedLetters letterClass={letterClass} strArray={[ 'C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e' ]} idx={15} />
                     </h1>
                     <p>
-                        I am interested in freelance opportunities - especially ambitious or large projects. However, if you have any other requests or questions, don't hesitate to contact me using the form below!
+                        I am interested in freelance opportunities - especially unique or large projects. However, if you have any other requests or questions, don't hesitate to contact me using the form below!
                     </p>
                     <div className='contact-form'>
                         <form ref={form} onSubmit={handleSubmit}>
