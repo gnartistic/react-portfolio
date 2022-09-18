@@ -43,7 +43,7 @@ const Sidebar = () =>
                 </a>
             </li>
             <li>
-                <a target="_blank" rel='noreferrer' href='/assets/charlie-houston-resume.pdf' activeclassname='active' className='resume'>
+                <a href='/assets/charlie-houston-resume.pdf' target="_blank" rel='noreferrer' activeclassname='active' className='resume'>
                     <FontAwesomeIcon icon={faFileLines} color="#fefefe" />
                 </a>
             </li>
