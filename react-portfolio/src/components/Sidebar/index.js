@@ -43,7 +43,7 @@ const Sidebar = () =>
                 </a>
             </li>
             <li>
-                <a href='/assets/charlie-houston-resume.pdf' target="_blank" rel='noreferrer' activeclassname='active' className='resume'>
+                <a href='https://gnartistic.github.io/assets/charlie-houston-resume.pdf' target="_blank" rel='noreferrer' activeclassname='active' className='resume'>
                     <FontAwesomeIcon icon={faFileLines} color="#fefefe" />
                 </a>
             </li>
