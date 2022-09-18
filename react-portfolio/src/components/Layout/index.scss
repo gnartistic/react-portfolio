@@ -118,6 +118,13 @@
 }
 
 @media screen and (max-width: 900px) {
+    .contact-page{
+        top: 7.5%;
+    }
+
+    .skills-page {
+        top: 0%;
+    }
 
     .works-page,
     .skills-page,
@@ -201,13 +208,15 @@
 @media screen and (max-width: 600px) {
 
     .about-page {
-        top: 10%;
+        top: 14.5%;
     }
 
     .contact-page {
-        top: 10%;
+        top: 15%;
     }
-
+    .skills-page {
+        top: 6%;
+    }
     .works-page,
     .skills-page,
     .about-page,

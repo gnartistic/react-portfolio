@@ -85,11 +85,14 @@
 }
 
 @media screen and (max-width: 900px) {
+    .home-page {
+        margin-top: 20%;
+    }
     .home-page h1 {
-        margin-left: 10%;
+        margin-left: 25%;
     }
     .home-page h2 {
-        margin-left: 10%;
+        margin-left: 26%;
         flex-wrap: wrap;
     }
     .tags,
@@ -110,7 +113,7 @@
         float: none;
         display: block;
         margin: 20px 0 0 0;
-        margin-left: 120px;
+        margin-left: 33%;
         width: 124px;
     }
 
