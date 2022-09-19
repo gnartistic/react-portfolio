@@ -27,6 +27,9 @@
   
   This is my portfolio website that I made using React, SCSS, and various npm packages.
   
+  <br/>
+  <br/>
+  
   ## Table of Contents
   
   [Usage Information](#usage-information)  
