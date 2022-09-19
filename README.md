@@ -5,8 +5,7 @@
   <br/>
 
   ## Deployment
-
-  ------
+  
   https://houstoncharlie.com  
 
   <img src="./assets/ss1.png" alt="home-page" width="600"/>
@@ -26,7 +25,6 @@
 
   ## Description
   
-  -----
   This is my portfolio website that I made using React, SCSS, and various npm packages.
   
   ## Table of Contents
@@ -40,7 +38,6 @@
   
   ## Usage-Information
 
-  ------
   This site was made to showcase my skills and to demonstrate my knowledge of React.  
   
   <br/>
@@ -48,7 +45,6 @@
 
   ## License
   
-  -------
   MIT License
   
   <br/>
@@ -56,7 +52,6 @@
 
   ## Contribution-Guidelines
   
-  -------
   I'm not accepting any contributions at this time.
   
   <br/>
@@ -64,7 +59,6 @@
 
   ## Questions
   
-  -------
   GitHub Username: [@gnartistic](https://github.com/gnartistic)  
   
   Please feel free to reach out to me at [gn4rtistic@gmail.com](mailto:gn4rtistic@gmail.com) for questions
