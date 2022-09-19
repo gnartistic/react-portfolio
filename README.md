@@ -9,11 +9,11 @@
   ------
   https://houstoncharlie.com  
 
-  <img src="./assets/ss1.png" alt="home-page" width="300"/>
-  <img src="./assets/ss2.png" alt="about-page" width="300"/>
-  <img src="./assets/ss3.png" alt="contact-page" width="300"/>
-  <img src="./assets/ss4.png" alt="skills-page" width="300"/>
-  <img src="./assets/ss5.png" alt="works-page" width="300"/>
+  <img src="./assets/ss1.png" alt="home-page" width="600"/>
+  <img src="./assets/ss2.png" alt="about-page" width="600"/>
+  <img src="./assets/ss3.png" alt="contact-page" width="600"/>
+  <img src="./assets/ss4.png" alt="skills-page" width="600"/>
+  <img src="./assets/ss5.png" alt="works-page" width="600"/>
 
   <!-- ![screenshot](assets/ss1.png)
   ![screenshot](assets/ss2.png)
