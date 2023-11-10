@@ -46,7 +46,7 @@
 
         img.Mac {
             width: auto;
-            height: 350px;
+            height: 250px;
         }
 
         img.Phone {
@@ -66,12 +66,6 @@
             width: auto;
             height: 350px;
         }
-
-        img.Phone {
-            padding-left: 20px;
-            width: auto;
-            height: 325px;
-        }
     }
 
     .photoPort {
@@ -82,7 +76,7 @@
 
         img.Mac {
             width: auto;
-            height: 350px;
+            height: 250px;
         }
 
         img.Phone {
@@ -196,6 +190,9 @@
 @media screen and (max-width: 1000px) {
     .works-page{
         overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .display-container {
         width: 550px;
@@ -235,7 +232,7 @@
 
         img.Mac {
             width: auto;
-            height: 350px;
+            height: 250px;
         }
 
         img.Phone {
@@ -253,7 +250,7 @@
 
         img.Mac {
             width: auto;
-            height: 350px;
+            height: 250px;
         }
 
         img.Phone {
@@ -270,7 +267,7 @@
 
         img.Mac {
             width: auto;
-            height: 350px;
+            height: 250px;
         }
 
         img.Phone {

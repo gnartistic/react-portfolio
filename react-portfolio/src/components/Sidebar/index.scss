@@ -237,6 +237,9 @@
                 height: 60px;
                 position: relative;
                 text-decoration: none;
+                display: flex !important;
+                justify-content: center;
+                align-items: center;
 
                 i { 
                     transition: all 0.3s ease-out;
@@ -260,7 +263,9 @@
                     letter-spacing: 2px;
                     position: absolute;
                     bottom: 0;
-                    display: block;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     width: 100%;
                     text-align: center;
                     opacity: 0;

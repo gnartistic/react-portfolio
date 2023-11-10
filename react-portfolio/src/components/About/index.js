@@ -1,8 +1,6 @@
 import AnimatedLetters from '../AnimatedLetters';
 import './index.scss';
 import { useState, useEffect } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBootstrap, faCss3, faGitAlt, faHtml5, faJsSquare, faReact } from '@fortawesome/free-brands-svg-icons';
 import Loader from 'react-loaders';
 
 
@@ -28,12 +26,9 @@ const About = () =>
                         strArray={[ 'A', 'b', 'o', 'u', 't', ' ', 'm', 'e' ]} idx={15}
                     />
                 </h1>
-                <p>I'm a very ambitious and creative fullstack developer looking for a role in an established company with opportunities to work with the latest technologies on challenging and diverse projects.</p>
-                    <p>I'm quietly confident, naturally curious, and perpetually working on developing my skills... one error at a time.</p>
-                    <br/>
-                <p><span className='smaller'>If I had to define myself in one sentence, it'd be:</span>
-                        <br />
-                    <br/> <span className='bold'>I am a natural engineer, who loves to explore, obsessed with experiencing the most this life has to offer with my family and 2 dogs.</span> </p>
+                <p>I am a full-stack developer with a keen eye for innovative solutions and a drive to excel in the tech industry. My journey in programming is marked by a constant thirst for knowledge and a commitment to excellence in every project I undertake.</p>
+                    <p> With a focus on both front-end and back-end technologies, I strive to create seamless, efficient, and impactful digital experiences.</p>
+                <p>At the heart of my work ethic is a dedication to problem-solving and a belief in the power of technology to transform ideas into reality. </p>
             </div>
         </div>
             <Loader type="line-scale-pulse-out-rapid" />

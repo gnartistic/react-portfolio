@@ -3,12 +3,11 @@ import './index.scss';
 import 'animate.css';
 import { useState, useEffect } from 'react';
 import Loader from 'react-loaders';
-import coinWikiMac from '../../assets/images/coinWikiMac.png';
-import coinWikiphone from '../../assets/images/coinWikiphone.png';
-import hobbyxchangeMac from '../../assets/images/hobbyxchangeMac.png';
-import hobbyxchangePhone from '../../assets/images/hobbyxchangeMobile.png';
-import photoportMac from '../../assets/images/photoportMac.png';
-import photoportPhone from '../../assets/images/photoportMobile.png';
+import rapptrLabs from '../../assets/images/RapptrLabs.png';
+import rapptrLabsPhone from '../../assets/images/rapptrLabs-phone.png'
+import starWarsApi from '../../assets/images/StarWarInfo.png'
+import amberPort from '../../assets/images/amberPort.png'
+import amberPortPhone from '../../assets/images/amberPort-phone.png'
 
 
 
@@ -37,29 +36,27 @@ const Works = () =>
                     </p>
                 </div>
                 <div className='display-container'>
-                        <h2><a href='https://gnartistic.github.io/coinWiki2.0/'>coinWiki</a></h2>
-                        <h3 className='description'>
-                        CoinWiki is an app I'm working to develop with my past classmates that is a educational resource for cyptocurrency. 
+                        <h2><a href='https://gnartistic.github.io/this/'>Rapptr Labs Login</a></h2>
+                        <h3 className='description'>I developed a dual-purpose login and to-do list component for Rapptr Labs using React. This component features robust input verification for secure user authentication and includes an integrated to-do list for enhanced user engagement and productivity. The design showcases the seamless combination of security and functionality in a user-friendly interface.
                         </h3>
                         <div className='coinWiki'>
-                            <img src={coinWikiMac} alt='coinWikiMac' className='Mac' />
-                            <img src={coinWikiphone} className='Phone' alt='coinWikiphone' />
+                            <img src={rapptrLabs} alt='coinWikiMac' className='Mac' />
+                            <img src={rapptrLabsPhone} className='Phone' alt='rapptr-labs' />
                         </div>
-                    <h2><a href='https://hobbyxchange.herokuapp.com/#'>HobbyXchange</a></h2>
+                    <h2><a href='https://hobbyxchahttps://gnartistic.github.io/StarWarsApi/'>Star Wars Wiki</a></h2>
                         <h3 className='description'>
-                        HobbyXchange is the place where failed hobbies go to die and be reborn. This app was built for those who frequently cycle through trying new hobbies and wish to sell or trade supplies with other users.
+                        I designed a Star Wars-themed app leveraging the Star Wars API to dynamically present information on various planets and characters. Utilizing React-Query, the app efficiently manages API calls, ensuring up-to-date data retrieval and optimal performance. The interface is user-centric, allowing for interactive searches and displaying information responsively based on user input. This project showcases my ability to integrate APIs and handle real-time data manipulation in a React environment, providing an engaging and informative user experience for Star Wars enthusiasts.
                         </h3>
                         <div className='hobbyXchange'>
-                            <img src={hobbyxchangeMac} alt='hobbyXchangeMac' className='Mac' />
-                            <img src={hobbyxchangePhone} className='Phone' alt='hobbyXchangeMobile' />
+                            <img src={starWarsApi} alt='hobbyXchangeMac' className='Mac' />
                         </div>
-                        <h2><a href='https://gnartistic.github.io/photoPortfolio/'>Photographer Portfolio</a></h2>
+                        <h2><a href='https://gnartistic.github.io/Amber-portfolio/#/'>Custom Clothing Creator Portfolio</a></h2>
                         <h3 className='description'>
-                        This is a Photographer Portfolio template, I made this to showcase the kind of apps I can make for small business owners and freelane artists.
+                        I developed this portfolio site for a friend's unique business of crafting custom clothing from used and recycled materials. The app showcases their collection with a focus on sustainability and creativity. Intuitive navigation and a clean, visually appealing layout allow users to explore the collection with ease. This app not only highlights my friend's artistic talent but also underscores the importance of eco-friendly fashion practices.
                         </h3>
                         <div className='photoPort'>
-                            <img src={photoportMac} alt='photoportMac' className='Mac' />
-                            <img src={photoportPhone} className='Phone' alt='photoportMobile' />
+                            <img src={amberPort} alt='photoportMac' className='Mac' />
+                            <img src={amberPortPhone} className='Phone' alt='photoportMobile' />
                     </div>
                 </div>
                 
