@@ -171,6 +171,11 @@
                 content: 'github';
             }
         }
+        a.medium {
+            &::after {
+                content: '';
+            }
+        }
 
         a.resume {
             &::after {

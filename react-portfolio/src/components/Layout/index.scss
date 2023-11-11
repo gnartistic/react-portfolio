@@ -208,14 +208,17 @@
 @media screen and (max-width: 600px) {
 
     .about-page {
-        top: 14.5%;
+        top: 2vh;
     }
 
     .contact-page {
-        top: 15%;
+        top: 8vh;
     }
     .skills-page {
-        top: 6%;
+        top: 1vh;
+    }
+    .works-page {
+        top: -1vh;
     }
     .works-page,
     .skills-page,

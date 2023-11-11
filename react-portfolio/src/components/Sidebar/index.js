@@ -4,7 +4,7 @@ import Logo from '../../assets/images/sideBarLogo.png';
 import LogoSubtitle from '../../assets/images/name.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faHome, faUser, faFileLines, faScrewdriverWrench, faLaptopCode } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub, } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub,faMedium } from '@fortawesome/free-brands-svg-icons';
 
 const Sidebar = () =>
 (
@@ -32,6 +32,11 @@ const Sidebar = () =>
             </NavLink>
         </nav>
         <ul>
+            <li>
+                <a target="_blank" rel='noreferrer' href='https://medium.com/@gn4rtistic' exact='true' activeclassname='active' className='medium'>
+                    <FontAwesomeIcon icon={faMedium} color="#fefefe" />
+                </a>
+            </li>
             <li>
                 <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/charlie-houston-43220a236/' exact='true' activeclassname='active' className='linkedIn'>
                     <FontAwesomeIcon icon={faLinkedin} color="#fefefe"/>
