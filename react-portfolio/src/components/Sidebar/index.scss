@@ -1,5 +1,5 @@
 .nav-bar {
-    background: #555c65;
+    background: #2d394b;
     width: 80px;
     height: 100%;
     position: absolute;
@@ -109,87 +109,87 @@
         }
     }
 
-    ul {
-        position: absolute;
-        bottom: 40px;
-        width: 100%;
-        display: block;
-        padding: 0;
-        list-style: none;
-        text-align: center;
-        margin: 0;
+    // ul {
+    //     position: absolute;
+    //     bottom: 40px;
+    //     width: 100%;
+    //     display: block;
+    //     padding: 0;
+    //     list-style: none;
+    //     text-align: center;
+    //     margin: 0;
 
-        li {
-            a {
-                font-size: 20px;
-            color: #353A41;
-            display: block;
-            line-height: 35px;
-            height: 35px;
-            position: relative;
-            text-decoration: none;
+    //     li {
+    //         a {
+    //             font-size: 20px;
+    //         color: #353A41;
+    //         display: block;
+    //         line-height: 35px;
+    //         height: 35px;
+    //         position: relative;
+    //         text-decoration: none;
 
-            i {
-                transition: all 0.3s ease-out;
-            }
+    //         i {
+    //             transition: all 0.3s ease-out;
+    //         }
 
-            &:hover {
-                color: #fefefe;
+    //         &:hover {
+    //             color: #fefefe;
 
-                svg {
-                    opacity: 0;
-                }
+    //             svg {
+    //                 opacity: 0;
+    //             }
 
-                &:after {
-                    opacity: 1;
-                }
-            }
+    //             &:after {
+    //                 opacity: 1;
+    //             }
+    //         }
 
-            &:after {
-                content: '';
-                font-size: 9px;
-                letter-spacing: 2px;
-                position: absolute;
-                bottom: 0;
-                display: block;
-                width: 100%;
-                text-align: center;
-                opacity: 0;
-                -webkit-transition: all 0.3s ease-out;
-                transition: all 0.3s ease-out;
-            }
+    //         &:after {
+    //             content: '';
+    //             font-size: 9px;
+    //             letter-spacing: 2px;
+    //             position: absolute;
+    //             bottom: 0;
+    //             display: block;
+    //             width: 100%;
+    //             text-align: center;
+    //             opacity: 0;
+    //             -webkit-transition: all 0.3s ease-out;
+    //             transition: all 0.3s ease-out;
+    //         }
 
-            &:first-child {
-                &::after {
-                    content: 'LinkedIn';
-                }
-            }
-        }
+    //         &:first-child {
+    //             &::after {
+    //                 content: 'LinkedIn';
+    //             }
+    //         }
+    //     }
 
-        a.gitHub {
-            &::after {
-                content: 'github';
-            }
-        }
-        a.medium {
-            &::after {
-                content: 'Medium';
-            }
-        }
+    //     a.gitHub {
+    //         &::after {
+    //             content: 'github';
+    //         }
+    //     }
+    //     a.medium {
+    //         &::after {
+    //             content: 'Medium';
+    //         }
+    //     }
 
-        a.resume {
-            &::after {
-                content: 'Resume';
-            }
-        }
+    //     a.resume {
+    //         &::after {
+    //             content: 'Resume';
+    //         }
+    //     }
 
-        a.active {
-            svg {
-                color: #25E4D2;
-            }
-        }
-            }
-        }
+    //     a.active {
+    //         svg {
+    //             color: #25E4D2;
+    //         }
+    //     }
+    //         }
+    //     }
     }
 
 @media screen and (max-width: 600px) {
@@ -313,30 +313,6 @@
             a.active {
                 svg {
                     color: #25E4D2;
-                }
-            }
-        }
-
-        ul {
-            position: absolute;
-            bottom: 20px;
-            width: 100%;
-            display: none;
-            padding: 0;
-            list-style: none;
-            text-align: center;
-            margin: 0;
-
-            li {
-                a {
-                    padding: 7px 0;
-                    display: block;
-                    font-size: 15px;
-                    line-height: 16px;
-
-                    &:hover svg {
-                        color: #25E4D2;
-                    }
                 }
             }
         }

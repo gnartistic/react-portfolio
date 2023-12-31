@@ -2,6 +2,9 @@ $primary-color: #25e4d2;
 
 @import 'animate.css';
 
+// Supports weights 300-700
+@import '@fontsource-variable/comfortaa';
+
 @import '~loaders.css/src/animations/line-scale-pulse-out-rapid.scss';
 
 @font-face {

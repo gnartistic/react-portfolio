@@ -1,5 +1,5 @@
 import './index.scss';
-import avatar from '../../../assets/images/avatar.png';
+import avatar from '../../../assets/images/charles.png';
 
 const Logo = () =>
 {

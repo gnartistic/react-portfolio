@@ -5,6 +5,9 @@
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.7.0",
+    "@fontsource-variable/comfortaa": "^5.0.18",
+    "@fontsource/ibm-plex-mono": "^5.0.8",
+    "@fontsource/poppins": "^5.0.8",
     "@fortawesome/free-brands-svg-icons": "^6.2.0",
     "@fortawesome/free-solid-svg-icons": "^6.2.0",
     "@fortawesome/react-fontawesome": "^0.2.0",

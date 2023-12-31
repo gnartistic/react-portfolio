@@ -89,6 +89,7 @@
 
 @media screen and (max-width: 600px) {
     .works-page {
+        height: 100vh !important;
     .text-zone {
         top: 34.5%;
 
@@ -98,10 +99,10 @@
 
 .display-container {
         width: 300px !important;
-        height: 450px !important;
+        height: 80vh !important;
         position: absolute;
         left: 5% !important;
-        top: 55% !important;
+        top: 45% !important;
         justify-content: space-between;
         align-items: center;
         overflow-y: scroll;
@@ -196,10 +197,9 @@
     }
     .display-container {
         width: 550px;
-        height: 500px;
+        height: 100vh !important;
         position: absolute;
         left: 20%;
-        top: 50%;
         justify-content: space-between;
         align-items: center;
         overflow-y: scroll;
@@ -264,6 +264,7 @@
         justify-content: space-around;
         align-items: center;
         flex-wrap: wrap;
+        margin-bottom: 450px !important;
 
         img.Mac {
             width: auto;

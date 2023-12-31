@@ -1,13 +1,22 @@
 .home-page {
-    margin-left: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 
     .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
         width: 40%;
         max-height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h1{
+            font-family: 'Comfortaa Variable',
+                    sans-serif;;
+            font-weight: 700;
+        }
     }
 
     h1 {
@@ -15,53 +24,127 @@
         font-size: 56px;
         line-height: 53px;
         margin: 0;
-        font-family: 'Coolvetica';
-        font-weight: 400;
 
         &:before {
             content: '<h1>';
-            font-family: 'La Belle Aurore', cursive;
+            font-family: 'Comfortaa Variable', sans-serif;
             color: #25E4D2;
             font-size: 18px;
             position: absolute;
             margin-top: -40px;
-            left: -15px;
+            left: 365px;
             opacity: 0.6;
         }
 
         &:after {
             content: '<h1/>';
-            font-family: 'La Belle Aurore', cursive;
+            font-family: 'Comfortaa Variable', sans-serif;
             color: #25E4D2;
             font-size: 18px;
             position: absolute;
-            margin-top: 18px;
-            margin-left: 20px;
+            margin-top: 90px;
+            margin-left: 40px;
             animation: fadeIn 1s 1.7s backwards;
             opacity: 0.6;
-        }
-
-        img {
-            margin-left: 6px;
-            opacity: 0;
-            width: 32px;
-            height: auto;
-            animation: rotateIn 1s linear both;
-            animation-delay: 1.4s;
-            margin-bottom: -1.2px;
-            padding: 0;
         }
     }
 
     h2 {
         color: #8d8d8d;
         margin-top: 20px;
-        font-weight: 400;
-        font-size: 11px;
-        font-family: sans-serif;
-        letter-spacing: 3px;
+        font-weight: 800;
+        font-size: 14px;
+        font-family:'Comfortaa Variable', sans-serif;
+        letter-spacing: 2px;
         animation: fadeIn 1s 1.8s backwards;
     }
+
+        ul {
+            width: 50%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            margin: 0;
+    
+            li {
+                a {
+                    font-size: 20px;
+                    color: #353A41;
+                    display: block;
+                    line-height: 35px;
+                    height: 35px;
+                    position: relative;
+                    text-decoration: none;
+    
+                    i {
+                        transition: all 0.3s ease-out;
+                    }
+    
+                    &:hover {
+                        color: #fefefe;
+    
+                        svg {
+                            opacity: 0;
+                        }
+    
+                        &:after {
+                            opacity: 1;
+                        }
+                    }
+    
+                    &:after {
+                        content: '';
+                        font-size: 9px;
+                        letter-spacing: 2px;
+                        position: absolute;
+                        bottom: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 5vh;
+                        text-align: center;
+                        opacity: 0;
+                        -webkit-transition: all 0.3s ease-out;
+                        transition: all 0.3s ease-out;
+                    }
+    
+                    &:first-child {
+                        &::after {
+                            content: 'LinkedIn';
+                        }
+                    }
+                }
+    
+                a.gitHub {
+                    &::after {
+                        content: 'github';
+                        width: 5vh !important;
+                    }
+                }
+    
+                a.medium {
+                    &::after {
+                        content: 'Medium';
+                    }
+                }
+    
+                a.resume {
+                    &::after {
+                        content: 'Resume';
+                    }
+                }
+    
+                a.active {
+                    svg {
+                        color: #25E4D2;
+                    }
+                }
+            }
+        }
 
     .flat-button {
         color: #25E4D2;
@@ -86,28 +169,128 @@
 
 @media screen and (max-width: 900px) {
     .home-page {
-        margin-top: 8vh;
+        margin-top: 5vh;
+        flex-direction: column !important;
+    }
+    .link-list {
+        margin-top: 5vh !important;
+        display: flex;
+        flex-direction: row !important;
     }
     .home-page h1 {
-        margin-left: 25%;
     }
     .home-page h2 {
-        margin-left: 26%;
         flex-wrap: wrap;
     }
-    .tags,
-    .home-page h1:before,
-    .home-page h1:after {
-        display: none;
+
+
+    
+    .top-tags{
+        top: 18% !important;
+    }
+    .tags, 
+    .home-page h1:before{
+        content: '<h1>';
+            font-family: 'Comfortaa Variable', sans-serif;
+            color: #25E4D2;
+            font-size: 18px;
+            position: absolute;
+            margin-top: -40px;
+            left: 45px;
+            opacity: 0.6;
     }
 
-    .home-page .text-zone {
-        position: initial;
-        width: 100%;
-        transform: none;
-        padding: 10px;
-        box-sizing: border-box;
+    .home-page h1:after {
+                    content: '<h1/>';
+                    font-family: 'Comfortaa Variable', sans-serif;
+                    color: #25E4D2;
+                    font-size: 18px;
+                    position: absolute;
+                    margin-top: 90px;
+                    margin-left: -20px;
+                    animation: fadeIn 1s 1.7s backwards;
+                    opacity: 0.6;
+
     }
+
+    .home-page ul {
+        width: 80%;
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        margin: 0;
+
+        li {
+            a {
+                font-size: 20px;
+            color: #353A41;
+            display: block;
+            line-height: 35px;
+            height: 35px;
+            position: relative;
+            text-decoration: none;
+
+            i {
+                transition: all 0.3s ease-out;
+            }
+
+            &:hover {
+                color: #fefefe;
+
+                svg {
+                    opacity: 0;
+                }
+
+                &:after {
+                    opacity: 1;
+                }
+            }
+
+            &:after {
+                content: '';
+                font-size: 9px;
+                letter-spacing: 2px;
+                position: absolute;
+                bottom: 0;
+                display: block;
+                width: 100%;
+                text-align: center;
+                opacity: 0;
+                -webkit-transition: all 0.3s ease-out;
+                transition: all 0.3s ease-out;
+            }
+
+            &:first-child {
+                &::after {
+                    content: 'LinkedIn';
+                }
+            }
+        }
+
+        a.gitHub {
+            &::after {
+                content: 'github';
+            }
+        }
+        a.medium {
+            &::after {
+                content: 'Medium';
+            }
+        }
+
+        a.resume {
+            &::after {
+                content: 'Resume';
+            }
+        }
+
+        a.active {
+            svg {
+                color: #25E4D2;
+            }
+        }
+            }
+        }
 
     .home-page .flat-button {
         float: none;
@@ -116,36 +299,14 @@
         margin-left: 33%;
         width: 124px;
     }
-
-    .logo-container {
-        position: relative;
-        width: 100px;
-        height: auto;
-        top: 50px;
-        right: 0;
-        box-sizing: border-box;
-        margin: auto;
-        left: 0;
-    }
-
-    .logo-container svg {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: 0;
-        margin: auto;
-    }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1120px) {
 
     .text-zone{
-        margin-bottom: 20px;
     }
     .home-page h1 {
-        margin-left: 22.5%;
-        font-size: 5vh;
+        font-size: 4vh;
 
         img {
             height: 4vh;
@@ -153,13 +314,11 @@
         }
     }
     .home-page h2 {
-        margin-left: 14%;
         font-size: 1.5vh;
     }
     .tags,
     .home-page h1:before,
     .home-page h1:after {
-        display: none;
     }
 
     .home-page .text-zone {
@@ -177,32 +336,13 @@
     }
 
     .home-page {
-        right: 15%;
-        top: 0%;
 
     .text-zone {
-        position: absolute;
-        top: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
-    .logo-container {
-        position: relative;
-        width: 100px;
-        height: auto;
-        top: 25px;
-        right: 0;
-        box-sizing: border-box;
-        margin: auto;
-        left: 0;
-    }
-
-    .logo-container img {
-        position: absolute;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: -30%;
-        margin: auto;
-    }
 }
 }

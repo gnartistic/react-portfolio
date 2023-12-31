@@ -1,29 +1,20 @@
 .logo-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
     img {
-        z-index: 0;
-        width: auto;
         height: 610px;
-        position: absolute;
-        top: 0;
-        right: 15%;
-        bottom: 0;
-        left: auto;
-        margin: auto;
     }
 }
 
 @media screen and (max-width: 900px) {
     .logo-container {
+        width: 100vw !important;
         img {
-            z-index: 0;
-            width: auto;
-            height: 570px;
-            position: relative;
-            top: 191px;
-            right: 10px;
-            bottom: 10px;
-            left: 10px;
-            margin: -210px;
+            height: 60%;
+            margin: 0 !important;
+            padding: 0!important;
         }
     }
 }
@@ -31,14 +22,11 @@
 @media screen and (max-width: 600px) {
     
     .logo-container {
+            margin-top: 5vh !important;
+        width: 100vw !important;
+
         img {
-            z-index: 0;
-            width: auto;
             height: 370px;
-            position: relative;
-            top: 50px;
-            bottom: 10px;
-            left: 5%;
         }
     }
 }

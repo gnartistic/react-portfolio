@@ -36,58 +36,68 @@
     input[type='email'] {
         width: 100%;
         border: 0;
-        background: #57606b;
+        background: #11223f;
         height: 50px;
         font-size: 16px;
         color: #fff;
         padding: 0 20px;
         box-sizing: border-box;
+        border-radius: 15px;
+        font-family: 'Comfortaa Variable',
+            sans-serif;
 
         &::placeholder {
-            color: #ffd700;
+            color: #ffffff;
             opacity: 0.6;
+            font-family: 'Comfortaa Variable',
+                sans-serif;
         }
     }
 
     textarea {
         width: 100%;
         border: 0;
-        background: #57606b;
+        background: #11223f;
         height: 50px;
         font-size: 16px;
-        color: #fff;
+        color: #ffffff;
         padding: 20px;
         min-height: 150px;
         box-sizing: border-box;
+        border-radius: 15px;
+        resize: none;
 
         &::placeholder {
-            color: #ffd700;
+            color: #ffffff;
             opacity: 0.6;
         }
     }
 
     .buttonContainer {
-        line-height: 11px;
         align-items: center;
         display: flex;
         justify-content: flex-end;
 
         .flat-button {
-            color: #ffd700;
+            color: #5ae9c9;
             background: 0 0;
+            font-family: 'Comfortaa Variable',
+                sans-serif;
             font-size: 11px;
+            font-weight: 800;
             letter-spacing: 3px;
             text-decoration: none;
-            padding: 8px 10px;
-            border: 1px solid #ffd700;
+            padding: 10px 0px 10px 0px;
+            border: 2px solid #5ae9c9;
             float: right;
-            border-radius: 4px;
+            border-radius: 15px;
             width: 25%;
             margin-left: 15px;
         }
 
         .sent-text {
-            font-family: 'Coolvetica';
+            font-family: 'Comfortaa Variable',
+                sans-serif;
             font-size: 20px;
             margin-left: 30%;
             width: 10%;

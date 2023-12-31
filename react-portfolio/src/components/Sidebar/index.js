@@ -31,7 +31,7 @@ const Sidebar = () =>
                 <FontAwesomeIcon icon={faLaptopCode} size="lg" color="#fefefe" />
             </NavLink>
         </nav>
-        <ul>
+        {/* <ul>
             <li>
                 <a target="_blank" rel='noreferrer' href='https://medium.com/@gn4rtistic' exact='true' activeclassname='active' className='medium'>
                     <FontAwesomeIcon icon={faMedium} color="#fefefe" />
@@ -52,7 +52,7 @@ const Sidebar = () =>
                     <FontAwesomeIcon icon={faFileLines} color="#fefefe" />
                 </a>
             </li>
-        </ul>
+        </ul> */}
     </div>
 )
 
