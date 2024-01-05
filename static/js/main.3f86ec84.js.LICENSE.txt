@@ -1,8 +1,27 @@
-/*!
-	Copyright (c) 2018 Jed Watson.
-	Licensed under the MIT License (MIT), see
-	http://jedwatson.github.io/classnames
+/*
+object-assign
+(c) Sindre Sorhus
+@license MIT
 */
+
+/*!
+      * fullPage 4.0.20
+      * https://github.com/alvarotrigo/fullPage.js
+      *
+      * @license GPLv3 for open source use only
+      * or Fullpage Commercial License for commercial use
+      * http://alvarotrigo.com/fullPage/pricing/
+      *
+      * Copyright (C) 2018 http://alvarotrigo.com/fullPage/ - A project by Alvaro Trigo
+      */
+
+/*!
+ * @fullpage/react-fullpage 0.1.40
+ * https://github.com/alvarotrigo/react-fullpage
+ * @license https://github.com/alvarotrigo/react-fullpage#license
+ *
+ * Copyright (C) 2018 alvarotrigo.com - A project by Alvaro Trigo & Michael Walker
+ */
 
 /**
  * @license React
@@ -44,35 +63,11 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-/**
- * @remix-run/router v1.1.0
+/** @license React v16.14.0
+ * react.production.min.js
  *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router DOM v6.5.0
- *
- * Copyright (c) Remix Software Inc.
+ * Copyright (c) Facebook, Inc. and its affiliates.
  *
  * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
- */
-
-/**
- * React Router v6.5.0
- *
- * Copyright (c) Remix Software Inc.
- *
- * This source code is licensed under the MIT license found in the
- * LICENSE.md file in the root directory of this source tree.
- *
- * @license MIT
+ * LICENSE file in the root directory of this source tree.
  */
