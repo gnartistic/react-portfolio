@@ -1,0 +1,136 @@
+$red: #cf191b;
+
+@import '@fontsource/ubuntu';
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.home-container {
+    height: 90vh;
+
+    .link-container {
+        width: 100vw;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .link-list {
+            display: flex;
+            flex-direction: row;
+
+            a {
+
+                .bx {
+                    color: #fff;
+                    font-size: 32px;
+                    padding: 10px;
+                    border-radius: 30px;
+                }
+            }
+        }
+    }
+
+    .main-container {
+        margin-top: 30px;
+        height: 80%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        animation: fadeIn 2.5s forwards;
+
+
+        h1 {
+            color: #fff;
+            width: 35vw;
+            font-family: 'Ubuntu';
+            font-size: 70px;
+
+            .react-typewriter-text {
+                font-size: 70px;
+            }
+
+            .red {
+                color: $red;
+            }
+        }
+
+        .contact-button {
+            color: #fff;
+            background-color: #cf191b;
+            width: 10vh;
+            padding: 10px 20px 10px 20px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform .2s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            a {
+                text-decoration: none;
+                color: #fff;
+                font: 'Ubuntu';
+                font-size: 20px;
+            }
+        }
+
+        .img-container {
+
+            .charlesCartoon {
+                width: 45vh;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .home-container {
+        flex-direction: column !important;
+        margin-top: 50px;
+        overflow: hidden;
+
+        .main-container{
+            margin-top: 10px !important;
+            flex-direction: column;
+            height: 80vh;
+        }
+
+        h1 {
+            width: 80vw !important;
+            font-size: 40px !important;
+
+            .react-typewriter-text {
+                font-size: 40px !important;
+            }
+        }
+
+        .contact-button {
+            font-size: 20px !important;
+        }
+    }
+
+    .img-container {
+
+        .charlesCartoon {
+            width: 35vh !important;
+            margin-bottom: 30px;
+        }
+    }
+}

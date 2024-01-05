@@ -1,0 +1,19 @@
+.App {
+  background-color: #0c0c0c;
+  height: 100vh;
+
+  @keyframes fadeOut {
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+#fp-nav {
+  display: none !important;
+}
+
+.section {
+  height: 100vh;
+}
