@@ -93,7 +93,7 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
   return (
     <div className='nav-container'>
       <div className='logo-container'>
-        <img className='logo' src={logo} alt={"c logo"} />
+        <a href="#home" onClick={() => fullpageApi?.moveTo( 1 )}><img className='logo' src={logo} alt={"c logo"} /></a>
       </div>
             {isMenuOpen && <div className="bm-overlay" onClick={closeMenu}></div>}
 

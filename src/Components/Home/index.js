@@ -23,7 +23,10 @@ const Home = ( { fullpageApi } ) =>
                 'Dog Dad',
                 'Musician'
               ]}
-              typeSpeed={100}
+              typeSpeed={70}
+              deleteSpeed={50}
+              delaySpeed={1000}
+              loop={true}
             />
 
           </h1>
@@ -38,22 +41,22 @@ const Home = ( { fullpageApi } ) =>
 
       <div className='link-container'>
         <div className='link-list'>
-        <a target="_blank" rel='noreferrer' href='https://medium.com/@gn4rtistic' exact='true' activeclassname='active' className='medium'>
-          <i class='bx bxl-medium-square' ></i>
-        </a>
-        <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/charlie-houston-43220a236/' exact='true' activeclassname='active' className='linkedIn'>
-          <i class='bx bxl-linkedin-square' ></i>
-        </a>
-        <a target="_blank" rel='noreferrer' href='https://github.com/gnartistic' exact='true' activeclassname='active' className='gitHub'>
-          <i class='bx bxl-github' ></i>
-        </a>
-        <a href='https://gnartistic.github.io/resume/' target="_blank" rel='noreferrer' activeclassname='active' className='resume'>
-          <i class='bx bxs-file-pdf' ></i>
-        </a>
-        <a href='https://www.tiktok.com/@bytesizedcoder?is_from_webapp=1&sender_device=pc' activeclassname='active' className='tiktok'>
-          <i class='bx bxl-tiktok' ></i>
+          <a target="_blank" rel='noreferrer' href='https://medium.com/@gn4rtistic' exact='true' activeclassname='active' className='medium'>
+            <i className='bx bxl-medium-square' ></i>
           </a>
-          </div>
+          <a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/charles-houston-dev/' exact='true' activeclassname='active' className='linkedIn'>
+            <i className='bx bxl-linkedin-square' ></i>
+          </a>
+          <a target="_blank" rel='noreferrer' href='https://github.com/gnartistic' exact='true' activeclassname='active' className='gitHub'>
+            <i className='bx bxl-github' ></i>
+          </a>
+          {/* <a href='https://gnartistic.github.io/resume/' target="_blank" rel='noreferrer' activeclassname='active' className='resume'>
+            <i className='bx bxs-file-pdf' ></i>
+          </a> */}
+          <a href='https://www.tiktok.com/@bytesizedcoder?is_from_webapp=1&sender_device=pc' activeclassname='active' className='tiktok'>
+            <i className='bx bxl-tiktok' ></i>
+          </a>
+        </div>
       </div>
     </div>
   )
