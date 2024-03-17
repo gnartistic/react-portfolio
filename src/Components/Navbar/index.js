@@ -1,21 +1,21 @@
 import React, { useState, useEffect } from 'react'
 import './index.scss';
 import logo from '../../assets/img/c-logo.png'
-import { slide as Menu } from 'react-burger-menu';
+import { stack as Menu } from 'react-burger-menu';
 
 
 const Navbar = ( { fullpageApi , currentSection } ) =>
 {
   const [ isMenuOpen, setIsMenuOpen ] = useState( false );
-  const [ isMobileView, setIsMobileView ] = useState( window.innerWidth < 768 );
+  const [ isMobileView, setIsMobileView ] = useState( window.innerWidth < 1068 );
   const isCurrent = (sectionIndex) => currentSection === sectionIndex;
 
 
   var styles = {
   bmBurgerButton: {
     position: 'fixed',
-    width: '20px',
-    height: '15px',
+    width: '35px',
+    height: '25px',
     right: '20px',
     top: '20px'
   },
@@ -33,10 +33,10 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
   },
   bmMenuWrap: {
     position: 'fixed',
-    height: '100%'
+    top: '0px',
   },
   bmMenu: {
-    background: '#15191c',
+    background: '#333',
     paddingTop: '3.5em',
     fontSize: '1.15em',
     overflow: 'none',
@@ -77,18 +77,11 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
   {
     const handleResize = () =>
     {
-      setIsMobileView( window.innerWidth < 768 );
+      setIsMobileView( window.innerWidth < 1068 );
     };
     window.addEventListener( 'resize', handleResize );
     return () => window.removeEventListener( 'resize', handleResize );
   }, [] );
-
-  const handleNavigation = ( sectionNumber ) =>
-  {
-    if( fullpageApi && fullpageApi.moveTo ) {
-      fullpageApi.moveTo( sectionNumber );
-    }
-  };
 
   return (
     <div className='nav-container'>
@@ -125,13 +118,13 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
         </div>
       )}
       {/* <!--Dark mode toggle--> */}
-      <div className="theme-switch-wrapper">
+      {/* <div className="theme-switch-wrapper">
         <input type="checkbox" id="theme-switch" className="theme-switch" />
         <label htmlFor="theme-switch" className="toggle-label">
           <i className='bx bx-sun' aria-hidden="true"></i>
           <i className='bx bx-moon' aria-hidden="true"></i>
         </label>
-      </div>
+      </div> */}
     </div >
   )
 }

@@ -1,6 +1,11 @@
+$red: #cf191b;
+
 .App {
   background-color: #0c0c0c;
   height: 100vh;
+  .section {
+    height: 100vh;
+  }
 
   @keyframes fadeOut {
     to {
@@ -10,10 +15,6 @@
   }
 }
 
-#fp-nav {
-  display: none !important;
-}
-
-.section {
-  height: 100vh;
+#fp-nav ul li a span {
+  background: $red;
 }

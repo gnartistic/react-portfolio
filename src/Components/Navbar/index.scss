@@ -30,7 +30,7 @@ $red: #cf191b;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: $nav-bg;
+    background-color: transparent;
     height: 6.5vh;
     color: #fff;
     font-family: $font;
@@ -45,10 +45,11 @@ $red: #cf191b;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 35vw;
+        width: 200px;
 
         .logo {
             width: 70px;
+            display: none !important;
         }
 
         h1 {
@@ -150,7 +151,7 @@ $red: #cf191b;
 }
 
 /* Media query for mobile view */
-@media (max-width: 768px) {
+@media (min-width: 965px) {
     .nav-container {
         height: 8vh;
         align-items: flex-start;
@@ -177,12 +178,13 @@ $red: #cf191b;
         }
 
         .logo-container {
-            width: 20vw !important;
+            width: 200px !important;
         }
 
         .logo {
             margin-top: 3px;
             width: 45px !important;
+            display: none !important;
         }
 
         .theme-switch-wrapper {

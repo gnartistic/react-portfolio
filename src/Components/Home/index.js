@@ -1,10 +1,46 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.scss';
-import charlie from '../../assets/images/charles.png'
-import TypeWriterEffect from 'react-typewriter-effect';
+import charlie from '../../assets/images/charles.png';
+
+const phrases = [ 'Web Developer', 'Content Creator', 'Dog Dad', 'Tech Enthusiast', 'Musician' ];
 
 const Home = ( { fullpageApi } ) =>
-{
+{          
+const [ currentText, setCurrentText ] = useState( '' );
+  const [ index, setIndex ] = useState( 0 );
+  const [ isDeleting, setIsDeleting ] = useState( false );
+
+  useEffect( () =>
+  {
+    const currentPhrase = phrases[ index ];
+
+    let timer;
+
+    const updateText = () =>
+    {
+      if( isDeleting ) {
+        setCurrentText( currentPhrase.substring( 0, currentText.length - 1 ) );
+      } else {
+        setCurrentText( currentPhrase.substring( 0, currentText.length + 1 ) );
+      }
+    };
+
+    const deleteSpeed = 75;
+    const typeSpeed = 100;
+
+    if( !isDeleting && currentText === currentPhrase ) {
+      timer = setTimeout( () => setIsDeleting( true ), 2000 );
+    } else if( isDeleting && currentText === '' ) {
+      setIsDeleting( false );
+      setIndex( ( index + 1 ) % phrases.length );
+    } else {
+      timer = setTimeout( updateText, isDeleting ? deleteSpeed : typeSpeed );
+    }
+
+      return () => clearTimeout( timer );
+  },  [ currentText, isDeleting, index, phrases ] )
+
+
   return (
     <div className='home-container'>
       <div className='main-container'>
@@ -13,23 +49,9 @@ const Home = ( { fullpageApi } ) =>
             <br />
             I'm <span className='red'>Charles</span>
             <br />
-            <TypeWriterEffect
-              textStyle={{ fontFamily: 'Ubuntu' }}
-              startDelay={50}
-              cursorColor="#fff"
-              multiText={[
-                'Web Developer',
-                'Content Creator',
-                'Dog Dad',
-                'Musician'
-              ]}
-              typeSpeed={70}
-              deleteSpeed={50}
-              delaySpeed={1000}
-              loop={true}
-            />
-
-          </h1>
+            {currentText}
+            <span className='cursor'> | </span>
+            </h1>
           <div className='contact-button'>
             <a href="#contact" onClick={() => fullpageApi?.moveTo( 6 )}>Contact</a></div>
         </div>

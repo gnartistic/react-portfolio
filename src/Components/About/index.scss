@@ -1,7 +1,145 @@
-.about-container {
-    height: 60vh;
+$red: #cf191b;
 
-    h1{
-        color: #ffffff;
+@import '~animate.css/animate.css';
+@import '@fontsource/ubuntu';
+.about-container {
+    height: 100vh;
+    overflow: hidden;
+    
+        .main-container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: row;
+            
+    
+            .profile-image {
+                width: 40vw; // Adjust size as needed
+                height: 40vw;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-left: 5vw;
+            }
+    
+            .about-me-content {
+                height: 50vh;
+                margin: 0px 70px 0px 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                position: relative;
+                overflow: hidden; // Prevents overflow during animation
+    
+                p {
+                    font-size: 1.5vw;
+                    text-indent: 40px;
+                    line-height: 42px;
+                    font-family: 'Ubuntu';
+    
+                }
+    
+                .navigation-dots {
+                    position: absolute;
+                    top: 90%;
+    
+                    .dot {
+                        height: 15px;
+                        width: 15px;
+                        margin: 0 5px;
+                        background-color: #bbb;
+                        border-radius: 50%;
+                        display: inline-block;
+                        transition: transform 0.3s, background-color 0.3s;
+    
+                        &.active {
+                            transform: scale(1.5);
+                            background-color: $red;
+                        }
+                    }
+                }
+    
+                .icon-container {
+                    width: 45vw;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-top: 20px;
+    
+                    .bx {
+                        cursor: pointer;
+                        font-size: 24px;
+                        /* Adjust the size as needed */
+                        /* Add any additional styling as needed */
+                    }
+                }
+            }
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .main-container {
+            flex-direction: column !important;
+            height: 100vh !important;
+        }
+    
+        .profile-image-container {
+            margin-bottom: 0% !important;
+        }
+    
+        .profile-image {
+            margin-top: 0vh !important;
+            width: 60vw !important; // Adjust size as needed
+            height: 60vw !important;
+            margin-left: 0 !important;
+            margin-bottom: -30px !important;
+        }
+    
+        .about-me-content {
+            height: 50vh !important;
+            width: 100vw;
+            position: relative;
+            margin-top: 0 !important;
+            margin-bottom: 100px !important;
+            overflow: hidden; // Prevents overflow during animation
+    
+    
+            p {
+                padding: 0px 30px 0px 30px;
+                font-size: 18px !important;
+                text-indent: 40px;
+                line-height: 20px !important;
+                font-family: 'Ubuntu';
+                margin-bottom: 50px !important;
+    
+            }
+    
+            .navigation-dots {
+                position: absolute;
+                top: 80% !important;
+    
+                .dot {
+                    height: 10px !important;
+                    width: 10px !important;
+                    margin: 0 5px !important;
+                }
+    
+            }
+    
+            .icon-container {
+                width: 80vw !important;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-top: 10px;
+
+            .bx {
+                    cursor: pointer;
+                    font-size: 24px;
+                    /* Adjust the size as needed */
+                    /* Add any additional styling as needed */
+                }
+            }
     }
 }
