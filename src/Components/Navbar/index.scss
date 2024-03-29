@@ -1,6 +1,6 @@
-$nav-bg: #1f1f1f;
+$green: #84a98c;
 $font: 'Ubuntu', sans-serif;
-$red: #cf191b;
+$white: #cad2c5;
 
 // Supports weights 300-700
 @import '@fontsource-variable/comfortaa';
@@ -73,7 +73,7 @@ $red: #cf191b;
             align-items: center;
             height: 45px;
             text-decoration: none;
-            color: #fff;
+            color: $white;
             font-family: $font;
             font-weight: 800;
             padding-bottom: 0px;
@@ -81,11 +81,11 @@ $red: #cf191b;
             border-bottom: 3px solid transparent;
 
             &:hover {
-                border-bottom-color: $red; // Optional: Red underline on hover
+                border-bottom-color: $green; // Optional: Red underline on hover
             }
 
             &.active {
-                border-bottom-color: $red; // Red underline for active link
+                border-bottom-color: #52796f; // Red underline for active link
             }
         }
     }
@@ -162,18 +162,18 @@ $red: #cf191b;
                 /* Control the width */
                 height: 2px;
                 /* Control the height/thickness */
-                background-color: $red;
+                background-color: $white;
                 /* Additional styling */
                 margin-top: 10px;
             }
-
+            
         .bm-item {
             &:hover {
-                border-bottom-color: $red; // Optional: Red underline on hover
+                border-bottom-color: #84a98c; // Optional: Red underline on hover
             }
 
             &.active {
-                border-bottom-color: $red; // Optional: Red underline on hover
+                border-bottom-color: $white; // Optional: Red underline on hover
             }
         }
 

@@ -8,7 +8,6 @@ import About from './Components/About';
 import Skills from './Components/Skills';
 import Projects from './Components/Projects';
 import Contact from './Components/Contact';
-import Content from './Components/Content';
 
 const App = () =>
 {
@@ -18,7 +17,6 @@ const App = () =>
     { component: <About />, anchor: 'about' },
     { component: <Skills />, anchor: 'skills' },
     { component: <Projects />, anchor: 'projects' },
-    { component: <Content />, anchor: 'content' },
     { component: <Contact />, anchor: 'contact' },
   ];
 
@@ -38,6 +36,8 @@ const App = () =>
           licenseKey="M09AH-6I3Y7-J7H58-CBJSJ-XBVMN"
           scrollingSpeed={1000}
           css3={true}
+          responsiveWidth={768}
+          responsiveHeight={1000}
           dragAndMove={true}
           loopBottom={true}
           credits={

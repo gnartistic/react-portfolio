@@ -1,4 +1,4 @@
-$red: #cf191b;
+$green: #84a98c;
 
 @import '@fontsource/ubuntu';
 
@@ -56,11 +56,11 @@ $red: #cf191b;
         
             0%,
             100% {
-                box-shadow: 0 0px 0px $red;
+                box-shadow: 0 0px 0px $green;
             }
         
             50% {
-                box-shadow: 0 0px 30px $red;
+                box-shadow: 0 0px 30px $green;
             }
         }
         
@@ -75,6 +75,7 @@ $red: #cf191b;
 
 .home-container {
     height: 100vh;
+    background-color: #2f3e46;
 
     .cursor {
             animation: blink 1s step-end infinite;
@@ -91,9 +92,12 @@ $red: #cf191b;
 
             a {
 
+                &:hover {
+                        transform: scale(1.2);
+                    }
                 .bx {
-                    color: #fff;
-                    font-size: 32px;
+                    color: #cad2c5;
+                    font-size: 42px;
                     padding: 0 10px 0 10px;
                 }
             }
@@ -110,7 +114,7 @@ $red: #cf191b;
 
 
         h1 {
-            color: #fff;
+            color: #cad2c5;
             width: 50vw;
             font-family: 'Ubuntu';
             font-size: 6vw;
@@ -121,13 +125,13 @@ $red: #cf191b;
             }
 
             .red {
-                color: $red;
+                color: $green;
             }
         }
 
         .contact-button {
-            color: #fff;
-            background-color: #cf191b;
+            color: #cad2c5;
+                background-color: $green;
             width: 10vh;
             padding: 10px 20px 10px 20px;
             border-radius: 10px;
@@ -136,11 +140,12 @@ $red: #cf191b;
 
             &:hover {
                 transform: scale(1.1);
+                background-color: #52796f;
             }
 
             a {
                 text-decoration: none;
-                color: #fff;
+                color: #cad2c5;
                 font: 'Ubuntu';
                 font-size: 20px;
             }
@@ -156,7 +161,7 @@ $red: #cf191b;
                 }
                 
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
 
     .home-container {
         flex-direction: column !important;
@@ -168,14 +173,15 @@ $red: #cf191b;
 
         .main-container {
             flex-direction: column;
-            height: 80vh !important;
+            height: 45vh !important;
             justify-content: center;
             }
             
             .intro {
                 display: flex;
-                justify-content: space-between;
                 flex-direction: column;
+                position: fixed;
+                top: 50px;
         }
 
         h1 {

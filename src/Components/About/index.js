@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useSwipeable } from 'react-swipeable';
 import './index.scss'; // Make sure to create this CSS file for styling
-import profilePic from '../../assets/img/IMG_0146.jpeg'
+import profilePic from '../../assets/img/IMG_1066.jpeg'
 
 const AboutMe = () =>
 {
@@ -19,36 +19,28 @@ const AboutMe = () =>
     const [ currentParagraph, setCurrentParagraph ] = useState( 0 );
     const [ animation, setAnimation ] = useState( '' );
 
-    const goToParagraph = ( index ) =>
-    {
-        if( index > currentParagraph ) {
-            // Moving forward
-            setAnimation( 'animate__animated animate__fadeOutLeft' );
-            setTimeout( () =>
-            {
-                setCurrentParagraph( index );
-                setAnimation( 'animate__animated animate__fadeInRight' );
-            }, 500 );
-        } else if( index < currentParagraph ) {
-            // Moving backward
-            setAnimation( 'animate__animated animate__fadeOutRight' );
-            setTimeout( () =>
-            {
-                setCurrentParagraph( index );
-                setAnimation( 'animate__animated animate__fadeInLeft' );
-            }, 500 );
+    const goToParagraph = (index) => {
+        
+        if(index >= paragraphs.length || index < 0) {
+            // Trigger shake animation
+            setAnimation('shake-animation');
+            setTimeout(() => {
+                setAnimation('');
+            }, 800); // Length of the shake animation
+            return;
         }
-        // If index === currentParagraph, do nothing
+
+        if (index > currentParagraph) {
+            setAnimation('animate__animated animate__fadeOutLeft');
+        } else {
+            setAnimation('animate__animated animate__fadeOutRight');
+        }
+
+        setTimeout(() => {
+            setCurrentParagraph(index);
+            setAnimation(index > currentParagraph ? 'animate__animated animate__fadeInRight' : 'animate__animated animate__fadeInLeft');
+        }, 500);
     };
-
-    // const goForward = () => {
-    //     setCurrentParagraph(prev => (prev + 1) % paragraphs.length);
-    // };
-
-    // const goBackward = () => {
-    //     setCurrentParagraph(prev => prev === 0 ? paragraphs.length - 1 : prev - 1);
-    // };
-
 
         const swipeHandlers = useSwipeable({
         onSwipedLeft: () => handleSwipe(currentParagraph + 1),
@@ -58,11 +50,6 @@ const AboutMe = () =>
     });
 
     const handleSwipe = (newIndex) => {
-        if (newIndex >= paragraphs.length) {
-            newIndex = 0; // Loop back to the start
-        } else if (newIndex < 0) {
-            newIndex = paragraphs.length - 1; // Loop to the end
-        }
         goToParagraph(newIndex);
     };
 

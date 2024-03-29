@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@emailjs/browser": "^3.7.0",
+    "@emailjs/browser": "^3.12.1",
     "@fontsource-variable/comfortaa": "^5.0.18",
     "@fontsource/ibm-plex-mono": "^5.0.8",
     "@fontsource/poppins": "^5.0.8",

@@ -20,10 +20,10 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
     top: '20px'
   },
   bmBurgerBars: {
-    background: '#fff'
+    background: '#cad2c5'
   },
   bmBurgerBarsHover: {
-    background: '#cf191b'
+    background: '#84a98c'
   },
   bmCrossButton: {
     display: 'none',
@@ -36,7 +36,7 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
     top: '0px',
   },
   bmMenu: {
-    background: '#333',
+    background: '#84a98c',
     paddingTop: '3.5em',
     fontSize: '1.15em',
     overflow: 'none',
@@ -46,7 +46,7 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
     fill: '#373a47'
   },
   bmItemList: {
-    color: '#b8b7ad',
+    color: '#354f52',
     padding: '0.8em',
     display: 'flex',
     flexDirection: 'column',
@@ -56,7 +56,7 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
   bmItem: {
     display: 'inline-block',
     textDecoration: 'none',
-    color: '#fff',
+    color: '#354f52',
     padding: '15px'
   },
   bmOverlay: {
@@ -101,10 +101,7 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
           <a href="#projects" onClick={() => fullpageApi?.moveTo( 4 )}>Projects
             <span className={isCurrent( 3 ) ? 'underline' : ''}></span></a>
           
-          <a href="#content" onClick={() => fullpageApi?.moveTo( 5 )}>Content
-            <span className={isCurrent( 4 ) ? 'underline' : ''}></span></a>
-          
-          <a href="#contact" onClick={() => fullpageApi?.moveTo( 6 )}>Contact<span className={isCurrent( 5 ) ? 'underline' : ''}></span></a>
+          <a href="#contact" onClick={() => fullpageApi?.moveTo( 5 )}>Contact<span className={isCurrent( 4 ) ? 'underline' : ''}></span></a>
         </Menu>
         
       ) : (
@@ -113,8 +110,7 @@ const Navbar = ( { fullpageApi , currentSection } ) =>
           <a className={isCurrent(1) ? 'active' : ''} href="#about" onClick={() => fullpageApi?.moveTo( 2 )}>About</a>
           <a className={isCurrent(2) ? 'active' : ''} href="#skills" onClick={() => fullpageApi?.moveTo( 3 )}>Skills</a>
           <a className={isCurrent(3) ? 'active' : ''} href="#projects" onClick={() => fullpageApi?.moveTo( 4 )}>Projects</a>
-          <a className={isCurrent(4) ? 'active' : ''} href="#content" onClick={() => fullpageApi?.moveTo( 5 )}>Content</a>
-          <a className={isCurrent(5) ? 'active' : ''} href="#contact" onClick={() => fullpageApi?.moveTo( 6 )}>Contact</a>
+          <a className={isCurrent(4) ? 'active' : ''} href="#contact" onClick={() => fullpageApi?.moveTo( 5 )}>Contact</a>
         </div>
       )}
       {/* <!--Dark mode toggle--> */}

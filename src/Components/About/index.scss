@@ -2,9 +2,38 @@ $red: #cf191b;
 
 @import '~animate.css/animate.css';
 @import '@fontsource/ubuntu';
+
+@keyframes shake {
+
+    0%,
+    100% {
+        transform: translateX(0);
+    }
+
+    10%,
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: translateX(-5px);
+    }
+
+    20%,
+    40%,
+    60%,
+    80% {
+        transform: translateX(5px);
+    }
+}
+
+.shake-animation {
+    animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+}
+
 .about-container {
     height: 100vh;
     overflow: hidden;
+    background-color: #52796f;
     
         .main-container {
             height: 100vh;
@@ -23,6 +52,7 @@ $red: #cf191b;
             }
     
             .about-me-content {
+                
                 height: 50vh;
                 margin: 0px 70px 0px 70px;
                 display: flex;
@@ -31,12 +61,16 @@ $red: #cf191b;
                 flex-direction: column;
                 position: relative;
                 overflow: hidden; // Prevents overflow during animation
+                
     
                 p {
                     font-size: 1.5vw;
                     text-indent: 40px;
                     line-height: 42px;
                     font-family: 'Ubuntu';
+                    margin-left: 20px;
+                        margin-right: 20px;
+                        color: #cad2c5;
     
                 }
     
@@ -48,14 +82,20 @@ $red: #cf191b;
                         height: 15px;
                         width: 15px;
                         margin: 0 5px;
-                        background-color: #bbb;
+                        background-color: #cad2c5;
                         border-radius: 50%;
                         display: inline-block;
                         transition: transform 0.3s, background-color 0.3s;
+                        cursor: pointer;
+                        
+                            &:hover {
+                                transform: scale(1.2);
+                            }
     
                         &.active {
                             transform: scale(1.5);
-                            background-color: $red;
+                            background-color: #84a98c;
+                            
                         }
                     }
                 }
@@ -78,10 +118,10 @@ $red: #cf191b;
         }
     }
     
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
         .main-container {
             flex-direction: column !important;
-            height: 100vh !important;
+            margin-bottom: 0 !important;
         }
     
         .profile-image-container {
@@ -90,10 +130,9 @@ $red: #cf191b;
     
         .profile-image {
             margin-top: 0vh !important;
-            width: 60vw !important; // Adjust size as needed
-            height: 60vw !important;
+            width: 70vw !important; // Adjust size as needed
+            height: 70vw !important;
             margin-left: 0 !important;
-            margin-bottom: -30px !important;
         }
     
         .about-me-content {
@@ -101,14 +140,13 @@ $red: #cf191b;
             width: 100vw;
             position: relative;
             margin-top: 0 !important;
-            margin-bottom: 100px !important;
             overflow: hidden; // Prevents overflow during animation
     
     
             p {
-                padding: 0px 30px 0px 30px;
+                padding: 0px 2px 0px 2px !important;
                 font-size: 18px !important;
-                text-indent: 40px;
+                text-indent: 20px !important;
                 line-height: 20px !important;
                 font-family: 'Ubuntu';
                 margin-bottom: 50px !important;
@@ -117,12 +155,14 @@ $red: #cf191b;
     
             .navigation-dots {
                 position: absolute;
-                top: 80% !important;
+                top: 85% !important;
+                
     
                 .dot {
                     height: 10px !important;
                     width: 10px !important;
                     margin: 0 5px !important;
+                    
                 }
     
             }
