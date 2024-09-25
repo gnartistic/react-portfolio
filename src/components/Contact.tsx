@@ -105,7 +105,7 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
   };
 
   return (
-    <Flex bg={activeTheme.accent} color={activeTheme.background} flexDirection="column" alignItems="center" minHeight="100vh" width="100%" p={10} pt="200px">
+    <Flex bg={activeTheme.accent} color={activeTheme.background} flexDirection="column" alignItems="center" minHeight="100vh" width="100%" p={10} pt={{ base: "100px", lg: "200px" }}>
       <Flex flexDirection="column" width="90%">
         <Text fontSize="3xl" fontWeight="bold" mb={{base: 3, lg: 10}}>
           Contact Me

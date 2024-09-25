@@ -34,7 +34,7 @@ const ProjectsPage = ({ activeTheme }: { activeTheme: any }) => {
   const isMobile = useBreakpointValue({ base: true, lg: false });
 
   return (
-    <Flex flexDirection="column" alignItems="center" bg={activeTheme.background} color={activeTheme.primary} minHeight="100vh" width="100%" p={10} pt="200px">
+    <Flex flexDirection="column" alignItems="center" bg={activeTheme.background} color={activeTheme.primary} minHeight="100vh" width="100%" p={10} pt={{ base: "100px", lg: "200px" }}>
       <Text fontSize="3xl" fontWeight="bold" mb={10}>
         {isMobile ? "PROJECTS" : "CLIENT & DISCIPLINES"}
       </Text>

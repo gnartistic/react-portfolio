@@ -137,14 +137,16 @@ export default function Home() {
         )}
 
         {/* Main content */}
-        <HomePage />
-        <Flex minHeight="100vh" width="100vw">
+        <Flex minHeight="100vh" id="home" width="100vw">
+          <HomePage />
+        </Flex>
+        <Flex minHeight="100vh" id="about" width="100vw">
           <AboutPage activeTheme={activeTheme} />
         </Flex>
-        <Flex minHeight="100vh" width="100vw">
+        <Flex minHeight="100vh" id="projects" width="100vw">
           <ProjectsPage activeTheme={activeTheme} />
         </Flex>
-        <Flex minHeight="100vh" width="100vw">
+        <Flex minHeight="100vh" id="contact" width="100vw">
           <ContactPage activeTheme={activeTheme} />
         </Flex>
       </Box>

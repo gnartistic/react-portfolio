@@ -1,6 +1,7 @@
+// src/components/Menu.tsx
 import { VStack, HStack, Text, Box, Link, IconButton, keyframes, Flex } from "@chakra-ui/react";
 import { CloseIcon } from "@chakra-ui/icons";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useAtom } from "jotai";
 import { themeAtom } from "@/state/themeState";
 import theme from "@/theme";
@@ -41,6 +42,14 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
   const [themeName] = useAtom(themeAtom);  // Get the current theme from Jotai
   const activeTheme = theme.colors[themeName] || theme.colors.light;  // Fallback to 'light' theme
 
+  const scrollToSection = (id: string) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      handleClose();  // Close menu after scrolling
+    }
+  };
+
   return (
     <Box
       height="100vh"
@@ -71,31 +80,29 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
         <VStack align="flex-start">
           {["home", "about", "projects", "contact"].map((menuItem, index) => (
             <HStack key={index} _hover={{ transform: "translateX(10px)", transition: "transform 0.3s ease" }}>
-              <Link href={`/${menuItem}`} textDecoration="none" _hover={{ textDecoration: 'none' }}>
-                <Flex alignItems="flex-end">
-                  <Text
-                    fontSize={{ base: "40px", lg: "9.3em" }}
-                    lineHeight=".8"
-                    letterSpacing="-.03em"
-                    fontWeight="bold"
-                    fontFamily="'IBM Plex Mono', monospace"
-                    color={activeTheme.background}
-                    casing="uppercase"
-                  >
-                    {menuItem}
-                  </Text>
-                  <ArrowRightIcon
-                    mb={1}
-                    ml={8}
-                    color={activeTheme.background}
-                    fontSize={{ base: "30px", lg: "5em" }}
-                    animation={`${slideArrow} 0.6s ease forwards`}  // Animate the arrow
-                    _groupHover={{
-                      animation: `${slideArrow} 0.6s ease forwards`,
-                    }}
-                  />
-                </Flex>
-              </Link>
+              <Text
+                fontSize={{ base: "40px", lg: "9.3em" }}
+                lineHeight=".8"
+                letterSpacing="-.03em"
+                fontWeight="bold"
+                fontFamily="'IBM Plex Mono', monospace"
+                color={activeTheme.background}
+                casing="uppercase"
+                onClick={() => scrollToSection(menuItem)}  // Trigger scroll and close
+                _hover={{ cursor: "pointer" }}  // Change cursor to pointer
+              >
+                {menuItem}
+              </Text>
+              <ArrowRightIcon
+                mb={1}
+                ml={8}
+                color={activeTheme.background}
+                fontSize={{ base: "30px", lg: "5em" }}
+                animation={`${slideArrow} 0.6s ease forwards`}  // Animate the arrow
+                _groupHover={{
+                  animation: `${slideArrow} 0.6s ease forwards`,
+                }}
+              />
             </HStack>
           ))}
         </VStack>
