@@ -52,7 +52,7 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
       position="relative"
       animation={closing ? `${slideOut} 0.5s ease-in-out` : undefined}  // Only apply animation when closing
     >
-      <Flex flexDirection="column" justifyContent="space-between" height="95%" p={"60px"}>
+      <Flex flexDirection="column" justifyContent={{ base: "space-around", lg: "space-between" }} height="95%" p={"60px"}>
         <IconButton
           icon={<CloseIcon />}
           aria-label="Close menu"
@@ -60,7 +60,7 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
           position="absolute"
           top={10}
           right={10}
-          fontSize="5.5em"
+          fontSize={{ base: "40px", lg: "5.5em" }}
           bg="transparent"
           color={activeTheme.background}
           _hover={{}}
@@ -74,7 +74,7 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
               <Link href={`/${menuItem}`} textDecoration="none" _hover={{ textDecoration: 'none' }}>
                 <Flex alignItems="flex-end">
                   <Text
-                    fontSize="9.3em"
+                    fontSize={{ base: "40px", lg: "9.3em" }}
                     lineHeight=".8"
                     letterSpacing="-.03em"
                     fontWeight="bold"
@@ -88,7 +88,7 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
                     mb={1}
                     ml={8}
                     color={activeTheme.background}
-                    fontSize="5em"
+                    fontSize={{ base: "30px", lg: "5em" }}
                     animation={`${slideArrow} 0.6s ease forwards`}  // Animate the arrow
                     _groupHover={{
                       animation: `${slideArrow} 0.6s ease forwards`,
@@ -101,15 +101,17 @@ const Menu = ({ closeMenu }: { closeMenu: () => void }) => {
         </VStack>
 
         <Box display="flex" justifyContent="space-between" width="100%">
-          <Link href="https://www.linkedin.com" isExternal>
+          <Link href="https://www.linkedin.com/in/charles-houston-dev/" isExternal>
             <Text fontSize="xl" fontFamily="'IBM Plex Mono', monospace" color={activeTheme.background}>LINKEDIN</Text>
           </Link>
-          <Link href="https://www.instagram.com" isExternal>
-            <Text fontSize="xl" fontFamily="'IBM Plex Mono', monospace" color={activeTheme.background}>INSTAGRAM</Text>
+          <Link href="https://github.com/gnartistic" isExternal>
+            <Text fontSize="xl" fontFamily="'IBM Plex Mono', monospace" color={activeTheme.background}>GITHUB</Text>
           </Link>
-          <Text fontSize="xl" align="right" fontFamily="'IBM Plex Mono', monospace" color={activeTheme.background}>
-            ©2023
-          </Text>
+          <Link href="https://medium.com/@gn4rtistic" isExternal>
+            <Text fontSize="xl" align="right" fontFamily="'IBM Plex Mono', monospace" color={activeTheme.background}>
+              MEDIUM
+            </Text>
+          </Link>
         </Box>
 
       </Flex>
