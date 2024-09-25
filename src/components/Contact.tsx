@@ -1,5 +1,4 @@
-// src/components/ContactPage.tsx
-import { useState } from "react";
+import { useState, useRef } from "react";
 import {
   Box,
   Flex,
@@ -9,8 +8,12 @@ import {
   Text,
   useToast,
 } from "@chakra-ui/react";
+import emailjs from "@emailjs/browser";
 
 const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const toast = useToast();
+
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -26,8 +29,6 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
     phone: "",
     message: "",
   });
-
-  const toast = useToast();
 
   const validateEmail = (email: string) => {
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -78,21 +79,41 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    if (validateForm()) {
-      toast({
-        title: "Message sent successfully!",
-        description: "We'll get back to you shortly.",
-        status: "success",
-        duration: 3000,
-        isClosable: true,
-      });
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
+    if (validateForm() && formRef.current) {
+      emailjs
+        .sendForm(
+          'gn4rtistic', 'template_i6x8ryc', 
+          formRef.current,
+          '4_qmxz9FGpsLgzJvV'
+        )
+        .then(
+          () => {
+            toast({
+              title: "Message sent successfully!",
+              description: "I'll get back to you shortly.",
+              status: "success",
+              duration: 3000,
+              isClosable: true,
+              position: "top",
+            });
+            setFormData({
+              firstName: "",
+              lastName: "",
+              email: "",
+              phone: "",
+              message: "",
+            });
+          },
+          () => {
+            toast({
+              title: "Failed to send the message.",
+              description: "Please try again later.",
+              status: "error",
+              duration: 3000,
+              isClosable: true,
+            });
+          }
+        );
     } else {
       toast({
         title: "Form submission failed.",
@@ -107,11 +128,11 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
   return (
     <Flex bg={activeTheme.accent} color={activeTheme.background} flexDirection="column" alignItems="center" minHeight="100vh" width="100%" p={10} pt={{ base: "100px", lg: "200px" }}>
       <Flex flexDirection="column" width="90%">
-        <Text fontSize="3xl" fontWeight="bold" mb={{base: 3, lg: 10}}>
+        <Text fontSize="3xl" fontWeight="bold" mb={{ base: 3, lg: 10 }}>
           Contact Me
         </Text>
-        <form onSubmit={handleSubmit}>
-          <Flex flexDirection="column" maxWidth="600px" mx="auto" gap={{base: 2, lg: 6}}>
+        <form ref={formRef} onSubmit={handleSubmit}>
+          <Flex flexDirection="column" maxWidth="600px" mx="auto" gap={{ base: 2, lg: 6 }}>
             <Box>
               <Text mb={2}>First Name</Text>
               <Input
@@ -180,7 +201,7 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
               type="submit"
               bg={activeTheme.background}
               color={activeTheme.accent}
-              _hover={{ bg: "orange.500" }}
+              _hover={{ bg: `${activeTheme.accent}` }}
               fontSize="lg"
               px={10}
               py={6}
