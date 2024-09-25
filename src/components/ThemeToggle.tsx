@@ -6,7 +6,7 @@ import theme from "@/theme";
 
 const ThemeToggle = () => {
   const [themeName, setThemeName] = useAtom(themeAtom);
-  const themes = ["light", "dark", "earth", "blueOrange", "pastelRainbow", "green"];
+  const themes = ["dark", "light", "iphone", "earth", "blueOrange", "pastelRainbow", "green"];
 
   const [isAnimating, setIsAnimating] = useState(false); 
 
@@ -64,7 +64,7 @@ const ThemeToggle = () => {
         onClick={toggleTheme}
         bg="transparent"
         color={activeTheme.primary}
-        border="10px solid"
+        border="12px solid"
         borderColor={activeTheme.primary}
         _hover={{}}
         _active={{}}

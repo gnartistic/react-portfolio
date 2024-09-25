@@ -12,49 +12,63 @@ const customTheme = extendTheme({
     // Light theme colors
     light: {
       background: "#ffffff",
-      primary: "#70798c",
-      secondary: "#444444",
-      accent: "#5F634F",  // Popular trending blue accent
+      primary: "#444444",
+      secondary: "#121212",
+      accent: "#74746D",
+      accent2: "#444444", // Popular trending blue accent
     },
 
     // Dark theme colors
     dark: {
       background: "#121212",
-      primary: "#E0E0E0",
-      secondary: "#BBBBBB",
-      accent: "#f7f7fc",  // Popular purple accent in dark mode
+      primary: "#f7f7fc",
+      secondary: "#74746D",
+      accent: "#444444",
+      accent2: "#74746D", // Popular purple accent in dark mode
+    },
+
+    iphone: {
+      background: "#ffffff",
+      primary: "#70798c",
+      secondary: "#444444",
+      accent: "#5F634F",
+      accent2: "#444444", // Popular trending blue accent
     },
 
     // Earth Tone theme
     earth: {
-      background: "#fefae0",
-      primary: "#606c38",
-      secondary: "#3a5a40",
-      accent: "#dda15e",
+      background: "#FBFBFF",
+      primary: "#147efb",
+      secondary: "#0B4F6C",
+      accent: "#757575",
+      accent2: "#1CAE1B"
     },
 
     // Colorful Purple theme
     blueOrange: {
-      background: "#f1faee",
-      primary: "#219ebc",
-      secondary: "#023047",
-      accent: "#ffb703",  // Vibrant purple
+      background: "#D5DDBC",
+      primary: "#A0AD85",
+      secondary: "#8A9B68",
+      accent: "#937B63",
+      accent2: "#2A2C24"
     },
 
     // Colorful Red theme
     pastelRainbow: {
-      background: "#faf0ca",
-      primary: "#f4d35e",
-      secondary: "#0d3b66",
-      accent: "#f95738",  // Bright red
+      background: "#595F72",
+      primary: "#E6F14A",
+      secondary: "#C3D350",
+      accent: "#C3D350",
+      accent2: "#84A07C"
     },
 
     // Colorful Green theme
     green: {
-      background: "#eff1ed",
-      primary: "#bcbd8b",
-      secondary: "#373d20",
-      accent: "#717744",  // Fresh green
+      background: "#e2cfea",
+      primary: "#a06cd5",
+      secondary: "#6247aa",
+      accent: "#102b3f",
+      accent2: "#5f758e"
     },
   },
 

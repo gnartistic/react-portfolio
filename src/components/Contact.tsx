@@ -141,7 +141,6 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
                 value={formData.firstName}
                 onChange={handleInputChange}
                 borderColor={activeTheme.background}
-                _hover={{ borderColor: "orange.500" }}
               />
               {errors.firstName && <Text color="red.500">{errors.firstName}</Text>}
             </Box>
@@ -154,7 +153,6 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
                 value={formData.lastName}
                 onChange={handleInputChange}
                 borderColor={activeTheme.background}
-                _hover={{ borderColor: "orange.500" }}
               />
               {errors.lastName && <Text color="red.500">{errors.lastName}</Text>}
             </Box>
@@ -167,7 +165,6 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
                 value={formData.email}
                 onChange={handleInputChange}
                 borderColor={activeTheme.background}
-                _hover={{ borderColor: "orange.500" }}
               />
               {errors.email && <Text color="red.500">{errors.email}</Text>}
             </Box>
@@ -180,7 +177,6 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
                 value={formData.phone}
                 onChange={handleInputChange}
                 borderColor={activeTheme.background}
-                _hover={{ borderColor: "orange.500" }}
               />
               {errors.phone && <Text color="red.500">{errors.phone}</Text>}
             </Box>
@@ -192,7 +188,6 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
                 value={formData.message}
                 onChange={handleInputChange}
                 borderColor={activeTheme.background}
-                _hover={{ borderColor: "orange.500" }}
               />
               {errors.message && <Text color="red.500">{errors.message}</Text>}
             </Box>
@@ -200,8 +195,8 @@ const ContactPage = ({ activeTheme }: { activeTheme: any }) => {
             <Button
               type="submit"
               bg={activeTheme.background}
-              color={activeTheme.accent}
-              _hover={{ bg: `${activeTheme.accent}` }}
+              color={activeTheme.primary}
+              _hover={{ bg: `${activeTheme.accent}`, color: `${activeTheme.background}` }}
               fontSize="lg"
               px={10}
               py={6}

@@ -30,7 +30,7 @@ const AboutPage = ({activeTheme}: {activeTheme: any}) => {
       ref={aboutRef}
       minHeight="100vh"
       flexDirection={{ base: "column-reverse", xl: "row" }}
-      bg={activeTheme.accent}
+      bg={activeTheme.accent2}
       justifyContent={{ base: "center", xl: "space-around" }}
       alignItems="center"
       gap={{base: 10, xl: 0}}
@@ -58,7 +58,7 @@ const AboutPage = ({activeTheme}: {activeTheme: any}) => {
         height="auto"
         position="relative"
         overflow="hidden"
-        bg={activeTheme.primary}
+        bg={activeTheme.accent}
       >
         {/* Profile Image */}
         <Image src={AboutPic.src} objectFit="cover" borderRadius="full" width="100%" height="100%" />
