@@ -41,10 +41,10 @@ const HomePage = () => {
           </Box>
 
           <Box width="200px" flexWrap="nowrap" display="flex" flexDirection="column" gap={2}>
-            <Text fontSize={{ base: "10px", lg: "14px" }}>
+            <Text fontSize={{ base: "12px", lg: "14px" }}>
               485 &gt; 0394.0
             </Text>
-            <Text fontSize={{ base: "10px", lg: "14px" }} casing="uppercase">
+            <Text fontSize={{ base: "12px", lg: "14px" }} casing="uppercase">
               Solving digital
               <br />
               problems since 2k20
@@ -55,8 +55,8 @@ const HomePage = () => {
 
       <Flex width={{ base: "95%", lg: "90%" }} alignItems="flex-end" justifyContent="flex-end">
         <Flex justifyContent={{ base: "center", lg: "space-between" }} width={{ base: "95%", lg: "70%" }} flexDirection={{ base: "column-reverse", lg: "row" }} alignItems={{ base: "flex-end", lg: "flex-start" }}>
-          <Box width={{ base: "100%", lg: "auto" }} height={{ base: "200px", lg: "420px" }} alignItems={{ base: "flex-end", lg: "flex-start" }} justifyContent="flex-end" flexWrap="nowrap" display="flex" flexDirection="column" gap={2}>
-            <Text fontSize={{ base: "10px", lg: "16px" }} casing="uppercase">
+          <Box width={{ base: "100%", lg: "auto" }} height={{ base: "220px", lg: "420px" }} alignItems={{ base: "flex-end", lg: "flex-start" }} justifyContent="flex-end" flexWrap="nowrap" display="flex" flexDirection="column" gap={2}>
+            <Text fontSize={{ base: "12px", lg: "16px" }} casing="uppercase">
               I'll make sure your website/shop
               <br />
               is keeping your customers
