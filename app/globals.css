@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+/* Class-based dark mode so the toggle can drive it (light is the default). */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/*
+  Material-derived editorial palette.
+  Light = paper + sawdust. Dark = "intentional dark mode" — warm charcoal, not black.
+  Accent is weld-arc blue; ember is the grinder-spark orange used sparingly.
+*/
+:root {
+  --paper: #f4f0e8;       /* sawdust off-white */
+  --ink: #1a1714;         /* charcoal, not pure black */
+  --ink-soft: #564f47;    /* muted body text */
+  --wood: #b5764a;        /* warm wood tone */
+  --steel: #6b7177;       /* raw/brushed steel */
+  --weld: #2f5fe0;        /* weld-arc blue (primary accent) */
+  --ember: #e8633a;       /* grinder-spark orange (sparingly) */
+  --line: #d8d0c2;        /* hairline rules */
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+.dark {
+  --paper: #16140f;
+  --ink: #ece6da;
+  --ink-soft: #a39a89;
+  --wood: #c98a5c;
+  --steel: #8a9097;
+  --weld: #5d86ff;
+  --ember: #ff7a4d;
+  --line: #2c2820;
+
+  --background: var(--paper);
+  --foreground: var(--ink);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-wood: var(--wood);
+  --color-steel: var(--steel);
+  --color-weld: var(--weld);
+  --color-ember: var(--ember);
+  --color-line: var(--line);
+
+  --font-display: var(--font-archivo), system-ui, sans-serif;
+  --font-sans: var(--font-inter), system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Editorial display type: tight, heavy, slightly condensed feel. */
+.display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+}
+
+/* Subtle paper/steel grain on section dividers — felt, not skeuomorphic. */
+.grain {
+  background-image: radial-gradient(var(--line) 0.5px, transparent 0.5px);
+  background-size: 6px 6px;
+  opacity: 0.4;
+}
+
+/* Reveal-on-scroll baseline; JS adds .is-visible. */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Respect users who don't want motion — kill transitions and reveal offsets. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
