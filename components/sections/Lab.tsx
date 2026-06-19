@@ -7,7 +7,7 @@ export function Lab() {
     <section id="lab" className="px-6 md:px-12 py-28 border-t border-line">
       <div className="max-w-6xl mx-auto w-full">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-weld mb-3">02 — Work</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-weld mb-3">03 — Work</p>
           <h2 className="display text-[clamp(2rem,6vw,4.5rem)] text-ink mb-4">Selected work</h2>
           <p className="text-ink-soft max-w-xl mb-14">
             Products shipped end-to-end — design, front end, and back end.

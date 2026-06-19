@@ -1,7 +1,10 @@
 import { Header } from "@/components/Header";
 import { Identity } from "@/components/sections/Identity";
 import { Workshop } from "@/components/sections/Workshop";
+import { Breach } from "@/components/sections/Breach";
 import { Lab } from "@/components/sections/Lab";
+import { Services } from "@/components/sections/Services";
+import { Reviews } from "@/components/sections/Reviews";
 import { Contact } from "@/components/sections/Contact";
 import { CommandPalette } from "@/components/CommandPalette";
 import { profile } from "@/lib/content";
@@ -13,7 +16,10 @@ export default function Home() {
       <main className="flex-1">
         <Identity />
         <Workshop />
+        <Breach />
         <Lab />
+        <Services />
+        <Reviews />
         <Contact />
       </main>
       <footer className="px-6 md:px-12 pt-10 pb-28 border-t border-line">

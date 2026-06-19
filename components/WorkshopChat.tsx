@@ -7,7 +7,7 @@ type Msg = { role: "you" | "ai"; text: string; tools?: string[] };
 
 const GREETING: Msg = {
   role: "ai",
-  text: "Hey — I'm Charles AI. Pick a bench and I'll tell you what's on it.",
+  text: "Hey — I'm Charles AI. Pick a topic and I'll tell you what he works with.",
 };
 
 export function WorkshopChat() {
@@ -42,7 +42,7 @@ export function WorkshopChat() {
       <div className="flex items-center gap-2 px-4 py-3 border-b border-line">
         <span className="h-2 w-2 rounded-full bg-weld animate-pulse" />
         <span className="font-mono text-xs uppercase tracking-wider text-ink">Charles AI</span>
-        <span className="font-mono text-xs uppercase tracking-wider text-ink-soft">· the workshop</span>
+        <span className="font-mono text-xs uppercase tracking-wider text-ink-soft">· skills</span>
       </div>
 
       {/* thread */}
@@ -88,7 +88,7 @@ export function WorkshopChat() {
 
       {/* suggested prompts */}
       <div className="border-t border-line px-4 py-3">
-        <p className="font-mono text-[10px] uppercase tracking-wider text-ink-soft mb-2.5">Suggested — tap a bench</p>
+        <p className="font-mono text-[10px] uppercase tracking-wider text-ink-soft mb-2.5">Suggested — tap a topic</p>
         <div className="flex flex-wrap gap-2">
           {toolkit.map((item) => (
             <button

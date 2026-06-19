@@ -7,7 +7,7 @@ export function Contact() {
     <section id="contact" className="px-6 md:px-12 py-28 border-t border-line">
       <div className="max-w-6xl mx-auto w-full">
         <Reveal>
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-weld mb-3">03 — Get in touch</p>
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-weld mb-3">06 — Get in touch</p>
           <h2 className="display text-[clamp(2.5rem,9vw,7rem)] text-ink leading-[0.9]">
             Let&apos;s build
             <br />

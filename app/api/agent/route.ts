@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { generateText, tool, stepCountIs } from "ai";
 import { anthropic } from "@ai-sdk/anthropic";
 import { z } from "zod";
-import { profile, projects, toolkit } from "@/lib/content";
+import { profile, projects, toolkit, services, serviceAddOns } from "@/lib/content";
 import { scriptedAgent, type AgentAction } from "@/lib/agent-fallback";
 
 // The agent runs server-side via Anthropic directly (ANTHROPIC_API_KEY).
@@ -19,19 +19,24 @@ ${profile.bio}
 PROJECTS (selected work):
 ${projects.map((p) => `- ${p.name} (#project-${p.slug})${p.role ? ` [${p.role}]` : ""}: ${p.blurb} Skills: ${p.skills.join(", ")}. Live: ${p.link}`).join("\n")}
 
-TOOLKIT (the Workshop):
+TOOLKIT (Skills):
 ${toolkit.map((t) => `- ${t.group}: ${t.tools.join(", ")}`).join("\n")}
+
+SERVICES (freelance — he's taking client work; #services): ${services.map((s) => `${s.name} (${s.tagline})`).join("; ")}. Add-ons: ${serviceAddOns.map((a) => a.name).join(", ")}. No fixed prices — interested visitors request a quote. Reviews are at #reviews. If someone wants a website/app/store built or asks about hiring, pricing, or availability, point them to services and contact.
 
 CONTACT: email ${profile.email}, GitHub ${profile.github}. He also publishes an npm package that prints his contact card in the terminal — run \`npm install ${profile.npmCard}\`.
 
-SECTIONS you can navigate to (use the navigate tool): identity, workshop, lab, contact. Projects: project-<slug> (e.g. project-shenhav).
+There's also a live security demo on the page: "Break Charles AI" (#breach) — a prompt-injection challenge where visitors try to make a guardian agent leak a secret flag across three levels of defense. It shows he builds AI agents AND red-teams them. Point security-minded or AI-curious visitors there.
+
+SECTIONS you can navigate to (use the navigate tool): identity, skills, breach, lab, services, reviews, contact. Projects: project-<slug> (e.g. project-shenhav).
 `.trim();
 
 const SYSTEM = `You are "Charles AI" — a terse, helpful guide to Charles Houston's portfolio, with a workshop personality (he's an engineer who also works in wood, metal, music, and security).
 
 Rules:
 - Answer ONLY from the knowledge below. If you don't know, say "Ask Charles directly" — never invent facts about him.
-- Keep replies to 1–2 short sentences. Workshop-flavored is good ("Pulling that off the bench…") but don't overdo it.
+- Always speak about Charles in the third person ("he", "his") — you are his guide, not him. Never reply as "I" when referring to Charles.
+- Keep replies to 1–2 short sentences. Workshop-flavored is good ("Let me pull that up…") but don't overdo it.
 - When the user wants to see something, CALL the navigate tool with the right target, then give a one-line reply. Always navigate when a section or project is relevant.
 
 KNOWLEDGE:
@@ -70,7 +75,7 @@ export async function POST(req: Request) {
             target: z
               .string()
               .describe(
-                "One of: identity, workshop, lab, workbench, contact, or project-<slug> like project-fetch",
+                "One of: identity, skills, breach, lab, contact, or project-<slug> like project-fetch",
               ),
           }),
           execute: async ({ target }) => {

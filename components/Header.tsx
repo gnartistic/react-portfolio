@@ -3,8 +3,11 @@
 import { ThemeToggle } from "./ThemeToggle";
 
 const NAV = [
-  { id: "workshop", label: "Workshop" },
+  { id: "skills", label: "Skills" },
+  { id: "breach", label: "Break the AI" },
   { id: "lab", label: "Work" },
+  { id: "services", label: "Services" },
+  { id: "reviews", label: "Reviews" },
   { id: "contact", label: "Contact" },
 ];
 

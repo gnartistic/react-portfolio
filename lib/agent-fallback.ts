@@ -9,7 +9,7 @@ export type AgentAction =
 
 export type AgentReply = { reply: string; action: AgentAction };
 
-const SECTIONS = ["identity", "workshop", "lab", "workbench", "contact"];
+const SECTIONS = ["identity", "skills", "breach", "lab", "contact"];
 
 /**
  * Scripted intent matcher. Runs entirely on the client and is used whenever the
@@ -26,7 +26,7 @@ export function scriptedAgent(raw: string): AgentReply {
   );
   if (proj) {
     return {
-      reply: `Pulling ${proj.name} off the bench. ${proj.blurb}`,
+      reply: `Pulling up ${proj.name}. ${proj.blurb}`,
       action: { type: "navigate", target: `project-${proj.slug}` },
     };
   }
@@ -38,22 +38,40 @@ export function scriptedAgent(raw: string): AgentReply {
       action: { type: "navigate", target: `project-${flagship.slug}` },
     };
   }
+  if (/(break|jailbreak|prompt ?inject|injection|red ?team|leak|flag|challenge|ctf)/.test(q)) {
+    return {
+      reply: "Try the Break Charles AI challenge — make a guardian agent leak its secret flag across three levels of defense. He builds agents and red-teams them.",
+      action: { type: "navigate", target: "breach" },
+    };
+  }
   if (/(security|cyber|bug ?bounty|pen ?test|pentest|hack|vuln|exploit|harden|appsec|infosec)/.test(q)) {
     return {
-      reply: "Yes — he hunts bugs on the side and takes security work: testing, secure implementation, and analysis. Here's the security bench.",
-      action: { type: "navigate", target: "workshop" },
+      reply: "Yes — he hunts bugs on the side and takes security work: testing, secure implementation, and analysis. There's even a live prompt-injection challenge to try.",
+      action: { type: "navigate", target: "breach" },
     };
   }
   if (/(\bai\b|llm|agent|machine learning|ml|gpt|model)/.test(q)) {
     return {
-      reply: "Yes — he's deep in AI right now. VirtuAI was the first dive; this very page runs a tool-calling agent. Sending you to the AI bench.",
-      action: { type: "navigate", target: "workshop" },
+      reply: "Yes — he's deep in AI right now. VirtuAI was the first dive; this very page runs a tool-calling agent. Sending you to his AI work.",
+      action: { type: "navigate", target: "skills" },
     };
   }
   if (/(wood|weld|metal|steel|mechanic|physical|hand|craft|build.*thing|off.?screen|guitar|music)/.test(q)) {
     return {
-      reply: "Off the screen he works in wood, steel, and mechanisms — and plays guitar. Ask the shop bench in the workshop.",
-      action: { type: "navigate", target: "workshop" },
+      reply: "Off the screen he works in wood, steel, and mechanisms — and plays guitar. Here's the shop, over in Skills.",
+      action: { type: "navigate", target: "skills" },
+    };
+  }
+  if (/(service|package|pricing|price|quote|cost|website|web ?site|store|ecommerce|e-commerce|shop|webapp|build me|need a)/.test(q)) {
+    return {
+      reply: "He builds business sites, e-commerce, portfolios, and web apps — plus AI and security add-ons. Pick the closest fit and request a quote.",
+      action: { type: "navigate", target: "services" },
+    };
+  }
+  if (/(review|testimonial|reference|reput)/.test(q)) {
+    return {
+      reply: "Reviews are just below — what clients say about working with him.",
+      action: { type: "navigate", target: "reviews" },
     };
   }
   if (/(contact|hire|email|reach|touch|talk|message|available|freelance|npm|install|card)/.test(q)) {
@@ -64,8 +82,8 @@ export function scriptedAgent(raw: string): AgentReply {
   }
   if (/(skill|stack|tech|know|tool|language|framework)/.test(q)) {
     return {
-      reply: "Here's the full toolkit — front end, back end, an AI bench, and the physical shop.",
-      action: { type: "navigate", target: "workshop" },
+      reply: "Here's the full toolkit — front end, back end, AI, and the physical shop.",
+      action: { type: "navigate", target: "skills" },
     };
   }
   if (/(project|work|portfolio|built|made|ship)/.test(q)) {

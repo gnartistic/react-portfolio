@@ -99,27 +99,28 @@ export const projects: Project[] = [
   },
 ];
 
-// The Workshop — skills as a craftsman's toolkit. Rendered as a "Charles AI"
+// Skills — presented as a craftsman's toolkit. Rendered as a "Charles AI"
 // chat: each group is a suggested prompt; `prompt` is the chip + user message,
-// `reply` is what Charles AI answers with (alongside the tool pills).
+// `reply` is what Charles AI answers with (alongside the tool pills). Charles AI
+// is a guide and speaks about Charles in the third person ("he").
 export const toolkit: { group: string; tools: string[]; prompt: string; reply: string }[] = [
   {
     group: "Languages",
     tools: ["TypeScript", "JavaScript", "Python"],
     prompt: "What languages does he use?",
-    reply: "Day to day I'm in TypeScript and JavaScript, with Python for AI, scripting, and data work.",
+    reply: "Day to day he's in TypeScript and JavaScript, with Python for AI, scripting, and data work.",
   },
   {
     group: "Front end",
     tools: ["React", "Next.js", "Angular", "Tailwind", "Motion"],
     prompt: "What's his front-end stack?",
-    reply: "I build interfaces in React and Next.js — and Angular when a project calls for it — styled with Tailwind and animated with Motion.",
+    reply: "He builds interfaces in React and Next.js — and Angular when a project calls for it — styled with Tailwind and animated with Motion.",
   },
   {
     group: "Back end",
     tools: ["Node", "tRPC", "Auth0", "REST APIs", "Serverless"],
     prompt: "Tell me about the back end",
-    reply: "Services on Node with tRPC for end-to-end type safety, Auth0 for auth, REST where it fits, and serverless for the rest.",
+    reply: "He runs services on Node with tRPC for end-to-end type safety, Auth0 for auth, REST where it fits, and serverless for the rest.",
   },
   {
     group: "Data",
@@ -131,26 +132,68 @@ export const toolkit: { group: string; tools: string[]; prompt: string; reply: s
     group: "Cloud & infra",
     tools: ["AWS Lambda", "S3", "SES", "Cloudflare", "Vercel"],
     prompt: "What about cloud & infra?",
-    reply: "I deploy on Vercel and Cloudflare, and run compute and storage on AWS — Lambda, S3, and SES.",
+    reply: "He deploys on Vercel and Cloudflare, and runs compute and storage on AWS — Lambda, S3, and SES.",
   },
   {
     group: "AI",
     tools: ["Anthropic API", "OpenAI API", "AWS Bedrock", "AI SDK", "RAG & agents"],
     prompt: "Is he any good with AI?",
-    reply: "I build with the Anthropic and OpenAI APIs and AWS Bedrock, using the Vercel AI SDK to ship agents, tools, and RAG. This chat is one example.",
+    reply: "He builds with the Anthropic and OpenAI APIs and AWS Bedrock, using the Vercel AI SDK to ship agents, tools, and RAG. This chat is one example.",
   },
   {
     group: "Security",
     tools: ["Bug bounty", "Pen testing", "Secure implementation", "Threat analysis", "Hardening"],
     prompt: "Does he do security work?",
-    reply: "On the side I hunt bugs, and I take security work: testing, secure implementation, threat analysis, and hardening.",
+    reply: "On the side he hunts bugs, and he takes security work: testing, secure implementation, threat analysis, and hardening.",
   },
   {
     group: "The shop",
     tools: ["Woodworking", "Welding / metal", "Mechanical builds", "Guitar"],
     prompt: "What does he build off the screen?",
-    reply: "Off the screen I build with my hands — woodworking, welding and metal fab, mechanical builds — and I play guitar.",
+    reply: "Off the screen he builds with his hands — woodworking, welding and metal fab, mechanical builds — and he plays guitar.",
   },
+];
+
+// Services — productized packages by site type, plus premium add-ons.
+// No prices: every CTA opens a pre-filled "request a quote" email.
+export const services: { slug: string; name: string; tagline: string; includes: string[] }[] = [
+  {
+    slug: "business",
+    name: "Business site",
+    tagline: "Marketing sites that actually sell.",
+    includes: ["Custom design & build", "Editable CMS", "SEO, analytics & performance", "Lead capture & contact", "Launch in ~2 weeks"],
+  },
+  {
+    slug: "ecommerce",
+    name: "E-commerce",
+    tagline: "Stores built to convert.",
+    includes: ["Storefront, cart & checkout", "Stripe / payments", "Inventory & order emails", "Abandoned-cart & analytics", "Scales as you grow"],
+  },
+  {
+    slug: "portfolio",
+    name: "Portfolio",
+    tagline: "Stand out — not template-out.",
+    includes: ["Bespoke, editorial design", "Interactive touches", "Blog / case studies", "Fast & accessible"],
+  },
+  {
+    slug: "webapp",
+    name: "Web app / SaaS",
+    tagline: "Full-stack product work.",
+    includes: ["Auth, dashboards & data", "tRPC · Postgres · AWS", "Integrations & APIs", "MVP to scale"],
+  },
+];
+
+export const serviceAddOns: { name: string; tagline: string }[] = [
+  { name: "AI integration", tagline: "Chatbots, agents, RAG, and automation built into your product — like the assistant on this site." },
+  { name: "Security", tagline: "Bug-bounty-honed testing, audits, and hardening most web shops don't offer." },
+];
+
+// Reviews — PLACEHOLDERS, clearly flagged. Replace these with real client quotes
+// and set placeholder: false (or remove the flag) before they should be trusted.
+export const reviews: { quote: string; name: string; role: string; placeholder?: boolean }[] = [
+  { quote: "Charles took us from a rough idea to a shipped product faster than we thought possible — and it looked better than we imagined.", name: "Sample Client", role: "Founder, Startup", placeholder: true },
+  { quote: "Reliable, communicative, and genuinely talented across design and engineering. He owned the whole stack.", name: "Sample Client", role: "Owner, Local Business", placeholder: true },
+  { quote: "The AI features he built set our product apart from everyone else in our space.", name: "Sample Client", role: "Product Lead, SaaS", placeholder: true },
 ];
 
 // Suggested prompts shown in the command palette to seed interaction.
